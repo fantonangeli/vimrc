@@ -398,7 +398,7 @@ set guioptions-=r  "remove menu bar"
 "MY CFG ---------------------------------------------------------
 
 "MY CMD --------------------------------------------------------
-" command Vimrc e $MYVIMRC
+command Vimrc e $HOME\.vim\vimrc\vimrc
 command JsSnip e $HOME\.vim\plugged\vim-snippets\snippets\javascript\javascript-my.snippets
 command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
 " command Restart source $MYVIMRC
