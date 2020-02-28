@@ -72,10 +72,7 @@ Plug 'mbbill/undotree'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-abolish'
-" Animations for lens
-Plug 'camspiers/animate.vim'
-" A Vim Automatic Window Resizing Plugin
-Plug 'camspiers/lens.vim' 
+
 
 " Generic Programming Support 
 Plug 'honza/vim-snippets'
