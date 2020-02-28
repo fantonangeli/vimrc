@@ -1,6 +1,3 @@
-""""""""""""""""""""""""""""""""""""
-" Allan MacGregor Vimrc configuration 
-"""""""""""""""""""""""""""""""""""""
 set nocompatible
 syntax on
 "set nowrap
@@ -30,7 +27,7 @@ if has("win32")
     set clipboard=unnamed
 
     " grep program
-    set grepprg=C:\Users\Antonangeli\Desktop\standalone\cygwin\bin\grep.exe\ -n\ $*
+    set grepprg=$HOME\Desktop\standalone\cygwin\bin\grep.exe\ -n\ $*
 else
     "Clipboard
     set clipboard=unnamedplus
@@ -75,6 +72,10 @@ Plug 'mbbill/undotree'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-abolish'
+" Animations for lens
+Plug 'camspiers/animate.vim'
+" A Vim Automatic Window Resizing Plugin
+Plug 'camspiers/lens.vim' 
 
 " Generic Programming Support 
 Plug 'honza/vim-snippets'
@@ -397,9 +398,9 @@ set guioptions-=r  "remove menu bar"
 "MY CFG ---------------------------------------------------------
 
 "MY CMD --------------------------------------------------------
-command Vimrc e $MYVIMRC
-command JsSnip e C:\Users\Antonangeli\.vim\plugged\vim-snippets\snippets\javascript\javascript-my.snippets
-command TySnip e C:\Users\Antonangeli\.vim\plugged\vim-snippets\snippets\typescript.snippets
+" command Vimrc e $MYVIMRC
+command JsSnip e $HOME\.vim\plugged\vim-snippets\snippets\javascript\javascript-my.snippets
+command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
 " command Restart source $MYVIMRC
 command Time put =strftime('%Y-%m-%d %H:%M')
 command TODOS VGFE "(TODO\|BUG)" 
