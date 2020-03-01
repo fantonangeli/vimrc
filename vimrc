@@ -405,7 +405,7 @@ command JsSnip e $HOME\.vim\plugged\vim-snippets\snippets\javascript\javascript-
 command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
 " command Restart source $MYVIMRC
 command Time put =strftime('%Y-%m-%d %H:%M')
-command GetTodoText :normal $xx^df:x0dw
+command GetTodoText :normal $xxx^df:x0dw
 command TODOS VGFE "(TODO\|BUG)" 
 command -nargs=1 VGALL VG <args> *
 
