@@ -181,8 +181,8 @@ if (has("termguicolors"))
 endif
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme holokai
-" colorscheme spacegray
+" colorscheme holokai
+colorscheme spacegray
 " colorscheme spacemacs-theme
  
 let g:spacegray_underline_search = 1
@@ -395,7 +395,12 @@ set guioptions-=r  "remove menu bar"
 "MY CFG ---------------------------------------------------------
 
 "MY CMD --------------------------------------------------------
-command Vimrc e $HOME\.vim\vimrc\vimrc
+if has("win32")
+    command Vimrc e $HOME\.vim\vimrc\vimrc
+else
+    command Vimrc e $HOME/.vim/vimrc/vimrc
+endif
+
 command JsSnip e $HOME\.vim\plugged\vim-snippets\snippets\javascript\javascript-my.snippets
 command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
 " command Restart source $MYVIMRC
