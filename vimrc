@@ -472,7 +472,7 @@ map <C-k> :cp<cr>
 
 "With leader-------------
 
-nnoremap <Leader>p :CtrlP<Cr>
+nnoremap <Leader>P :CtrlP<Cr>
 
 "CtrlPFunky
 nnoremap <Leader>f :CtrlPFunky<Cr>
