@@ -392,7 +392,6 @@ set guioptions-=T  "remove toolbar"
 set guioptions-=m  "remove menu bar"
 set guioptions-=r  "remove menu bar"
 
-"MY CFG ---------------------------------------------------------
 
 "MY CMD --------------------------------------------------------
 if has("win32")
@@ -423,11 +422,16 @@ command ThisFunctions /this\.\w\+\s*=\s*function
 command Backtick :normal a``
 command Tilde :normal a~
 command -nargs=1 TSF tabnew | setfiletype <args> 
-command Explorer !start explorer %:p:h:gs?\/?\\\\\\?<CR>
+
+" Windows
+command Explorer !start explorer %:p:h:gs?\/?\\\\\\?
 command Cmd !start cmd
-command Cygwin !silent C:\cygwin64\bin\mintty.exe<CR>
-command Dolphin !dolphin %:p:h &<CR>
-command Xterm !xterm &<CR>
+command Cygwin !silent C:\cygwin64\bin\mintty.exe
+
+" Linux
+command Dolphin !dolphin %:p:h &
+command Xterm !xterm &
+
 command U UndotreeToggle 
 command PU PlugUpdate 
 command Spell setlocal spell spelllang=en_us<CR>
