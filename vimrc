@@ -429,8 +429,8 @@ command Cmd !start cmd
 command Cygwin !silent C:\cygwin64\bin\mintty.exe
 
 " Linux
-command Dolphin !dolphin %:p:h &
-command Xterm !xterm &
+command Dolphin silent !dolphin %:p:h &
+command Xterm silent !xterm &
 
 command U UndotreeToggle 
 command PU PlugUpdate 
