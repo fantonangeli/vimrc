@@ -396,12 +396,14 @@ set guioptions-=r  "remove menu bar"
 "MY CMD --------------------------------------------------------
 if has("win32")
     command Vimrc e $HOME\.vim\vimrc\vimrc
+    command JsSnip e $HOME\.vim\plugged\vim-snippets\snippets\javascript\javascript-my.snippets
+    command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
 else
     command Vimrc e $HOME/.vim/vimrc/vimrc
+    command JsSnip e $HOME/.vim/plugged/vim-snippets/snippets/javascript/javascript-my.snippets
+    command TySnip e $HOME/.vim/plugged/vim-snippets/snippets/typescript.snippets
 endif
 
-command JsSnip e $HOME\.vim\plugged\vim-snippets\snippets\javascript\javascript-my.snippets
-command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
 " command Restart source $MYVIMRC
 command Time put =strftime('%Y-%m-%d %H:%M')
 command GetTodoText :normal $xxx^df:x0dw
