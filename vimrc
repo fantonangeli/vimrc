@@ -218,10 +218,16 @@ let g:syntastic_javascript_checkers = ['eslint']
 " NerdTree
 let g:NERDTreeWinSize=60
 
+" SCSS
+augroup scss
+    au!
+    au BufNewFile,BufRead *.scss setlocal filetype=scss
+augroup END
+
 " SASS
 augroup sass
     au!
-    au BufNewFile,BufRead *.sass,*.scss setlocal filetype=sass
+    au BufNewFile,BufRead *.sass setlocal filetype=sass
 augroup END
 
 " HTML
