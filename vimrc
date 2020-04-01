@@ -141,7 +141,7 @@ Plug 'leafgarland/typescript-vim'
 " Plug 'Valloric/MatchTagAlways'  "too slow
 
 "Typo3
-Plug 'elmar-hinz/vim.typoscript'
+" Plug 'elmar-hinz/vim.typoscript'
 
 " JSON
 Plug 'vim-scripts/JSON.vim'
