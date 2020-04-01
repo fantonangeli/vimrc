@@ -51,7 +51,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ervandew/supertab'
 Plug 'schickling/vim-bufonly'
 " Plug 'wesQ3/vim-windowswap'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
+Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
+Plug 'tomtom/tlib_vim' "required by vim-snipmate
+Plug 'garbas/vim-snipmate'
 Plug 'godlygeek/tabular'
 " Plug 'chrisbra/csv.vim'
 Plug 'ctrlpvim/ctrlp.vim'
