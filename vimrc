@@ -493,6 +493,8 @@ nnoremap <Leader>P :CtrlP<Cr>
 
 "CtrlPFunky
 nnoremap <Leader>f :CtrlPFunky<Cr>
+"select function
+nnoremap <Leader>vf va{V<Cr>
 "copy function
 nnoremap <Leader>yf va{Vy<Cr>
 "copy all 
