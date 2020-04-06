@@ -260,15 +260,6 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "   autocmd FileType text         call pencil#init()
 " augroup END
 "
-" Vim-UtilSnips Configuration
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical" " If you want :UltiSnipsEdit to split your window.
-
-" Vim-Test Configuration
-" let test#strategy = "vimux"
 
 " Neocomplete Settings
 let g:acp_enableAtStartup = 0
