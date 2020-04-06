@@ -43,12 +43,12 @@ call plug#begin('~/.vim/plugged')
 
 
 " let Vundle manage Vundle, required
-Plug 'gmarik/Vundle.vim'
+" Plug 'gmarik/Vundle.vim'
 
 " Utility
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'majutsushi/tagbar'
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 Plug 'schickling/vim-bufonly'
 " Plug 'wesQ3/vim-windowswap'
 Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
