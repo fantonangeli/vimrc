@@ -56,7 +56,6 @@ Plug 'tomtom/tlib_vim' "required by vim-snipmate
 Plug 'garbas/vim-snipmate'
 Plug 'godlygeek/tabular'
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'benmills/vimux'
 Plug 'Shougo/neocomplete.vim'
 " Plug 'tpope/vim-dispatch'
 " Plug 'rhysd/devdocs.vim'
