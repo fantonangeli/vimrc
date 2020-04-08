@@ -48,7 +48,7 @@ call plug#begin('~/.vim/plugged')
 " Utility
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'majutsushi/tagbar'
-" Plug 'ervandew/supertab'
+Plug 'ervandew/supertab'
 Plug 'schickling/vim-bufonly'
 " Plug 'wesQ3/vim-windowswap'
 Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
@@ -56,7 +56,7 @@ Plug 'tomtom/tlib_vim' "required by vim-snipmate
 Plug 'garbas/vim-snipmate'
 Plug 'godlygeek/tabular'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Shougo/neocomplete.vim'
+" Plug 'Shougo/neocomplete.vim'
 " Plug 'tpope/vim-dispatch'
 " Plug 'rhysd/devdocs.vim'
 Plug 'xolox/vim-misc'
