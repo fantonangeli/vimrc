@@ -401,7 +401,7 @@ else
     command TySnip e $HOME/.vim/plugged/vim-snippets/snippets/typescript.snippets
 endif
 
-command WriteRandomNum :r! echo $RANDOM
+command WriteRandomNum :r! echo $((1 + RANDOM % 100))
 command Time put =strftime('%Y-%m-%d %H:%M')
 command GetTodoText :normal $xxx^df:x0dw
 command TODOS VGFE "(TODO\|BUG)" 
