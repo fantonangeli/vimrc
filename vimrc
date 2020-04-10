@@ -46,7 +46,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'gmarik/Vundle.vim'
 
 " Utility
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'majutsushi/tagbar'
 Plug 'ervandew/supertab'
 Plug 'schickling/vim-bufonly'
@@ -205,8 +205,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 " Vim-PDV Configuration 
 " let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 
-" NerdTree
-let g:NERDTreeWinSize=60
+" " NerdTree
+" let g:NERDTreeWinSize=60
 
 " SCSS
 augroup scss
