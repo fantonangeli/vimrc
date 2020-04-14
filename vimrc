@@ -68,7 +68,6 @@ Plug 'mbbill/undotree'
 " Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-abolish'
 
-
 " Generic Programming Support 
 Plug 'honza/vim-snippets'
 Plug 'Townk/vim-autoclose'
@@ -325,12 +324,12 @@ set guioptions-=r  "remove menu bar"
 "MY CMD --------------------------------------------------------
 if has("win32")
     command Vimrc e $HOME\.vim\vimrc\vimrc
-    command JsSnip e $HOME\.vim\plugged\vim-snippets\snippets\javascript\javascript-my.snippets
-    command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
+    command JsSnip e $HOME\.vim\javascript.snippets
+    " command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
 else
     command Vimrc e $HOME/.vim/vimrc/vimrc
-    command JsSnip e $HOME/.vim/plugged/vim-snippets/snippets/javascript/javascript-my.snippets
-    command TySnip e $HOME/.vim/plugged/vim-snippets/snippets/typescript.snippets
+    command JsSnip e $HOME/.vim/javascript.snippets
+    " command TySnip e $HOME/.vim/plugged/vim-snippets/snippets/typescript.snippets
 endif
 
 command WriteRandomNum :r! echo $RANDOM
