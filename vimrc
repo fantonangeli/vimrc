@@ -68,6 +68,9 @@ Plug 'mbbill/undotree'
 " Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-abolish'
 
+" Plug 'ajh17/VimCompletesMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Generic Programming Support 
 Plug 'honza/vim-snippets'
 Plug 'Townk/vim-autoclose'
@@ -324,17 +327,17 @@ set guioptions-=r  "remove menu bar"
 "MY CMD --------------------------------------------------------
 if has("win32")
     command Vimrc e $HOME\.vim\vimrc\vimrc
-    command JsSnip e $HOME\.vim\javascript.snippets
+    command JsSnip e $HOME\.vim\snippets\javascript.snippets
     " command TySnip e $HOME\.vim\plugged\vim-snippets\snippets\typescript.snippets
 else
     command Vimrc e $HOME/.vim/vimrc/vimrc
-    command JsSnip e $HOME/.vim/javascript.snippets
+    command JsSnip e $HOME/.vim/snippets/javascript.snippets
     " command TySnip e $HOME/.vim/plugged/vim-snippets/snippets/typescript.snippets
 endif
 
 command WriteRandomNum :r! echo $RANDOM
 command Time put =strftime('%Y-%m-%d %H:%M')
-command GetTodoText :normal $xxx^df:x0dw
+command PutTodoText :normal Vp$xxx^df:x0dw
 command TODOS VGFE "(TODO\|BUG)" 
 command -nargs=1 VGALL VG <args> *
 
