@@ -100,6 +100,7 @@ Plug 'mhinz/vim-signify'
 " Plug 'AnsiEsc.vim'
 " Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline' "provides bufferline functionality for the lightline
 " Plug 'sjl/badwolf'
 " Plug 'tomasr/molokai'
 " Plug 'morhetz/gruvbox'
@@ -183,14 +184,11 @@ colorscheme spacegray
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 
-
+"lightline + bufferline config
 let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
-      \ 'tabline': {
-      \   'left': [['buffers']],
-      \   'right': [[ 'exit' ]],
-      \ },
+      \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
@@ -198,13 +196,10 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head'
       \ },
-      \ 'component_expand': {
-      \   'buffers': 'lightline#bufferline#buffers',
-      \ },
-      \ 'component_type': {
-      \   'buffers': 'tabsel'
-      \ },
+      \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
+      \ 'component_type': {'buffers': 'tabsel'},
       \ }
+set showtabline=2
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
@@ -332,10 +327,6 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 
 
-"GVIM
-set guioptions-=T  "remove toolbar"
-set guioptions-=m  "remove menu bar"
-set guioptions-=r  "remove menu bar"
 
 
 "MY CMD --------------------------------------------------------
