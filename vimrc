@@ -99,7 +99,7 @@ Plug 'mhinz/vim-signify'
 
 " Theme / Interface
 " Plug 'AnsiEsc.vim'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'sjl/badwolf'
@@ -370,7 +370,7 @@ command PU PlugUpdate
 command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
 command CopyFilePath let @*=expand("%:.")
-command -nargs=1 OS OpenSession <args> | Cmd
+" command -nargs=1 OS OpenSession <args> | Cmd
 
 "MY JsBeautify CMD
 command JsBeautify call JsBeautify()
