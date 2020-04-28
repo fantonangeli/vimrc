@@ -100,8 +100,9 @@ Plug 'mhinz/vim-signify'
 " Theme / Interface
 " Plug 'AnsiEsc.vim'
 " Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 " Plug 'sjl/badwolf'
 " Plug 'tomasr/molokai'
 " Plug 'morhetz/gruvbox'
@@ -186,11 +187,33 @@ let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 
 " Vim-Airline Configuration
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1 
-let g:airline_theme='hybrid'
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1 
+" let g:airline_theme='hybrid'
+" let g:hybrid_custom_term_colors = 1
+" let g:hybrid_reduced_contrast = 1 
+
+let g:lightline = {
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' },
+      \ 'tabline': {
+      \   'left': [['buffers']],
+      \   'right': [[ 'exit' ]],
+      \ },
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers',
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ },
+      \ }
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
