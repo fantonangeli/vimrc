@@ -61,10 +61,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'rhysd/devdocs.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-Plug 'drmikehenry/vim-fontsize'
+Plug 'drmikehenry/vim-fontsize' "Adjust font size via keypresses
 Plug 'mbbill/undotree'
 " Plug 'ludovicchabant/vim-gutentags'
-" Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-abolish'
 
 " Plug 'ajh17/VimCompletesMe'
@@ -74,7 +73,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'Townk/vim-autoclose'
 Plug 'tomtom/tcomment_vim'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 Plug 'Chiel92/vim-autoformat'
 Plug 'maksimr/vim-jsbeautify'
 
@@ -85,7 +84,7 @@ Plug 'maksimr/vim-jsbeautify'
 " Plug 'LanguageTool'
 
 " Git Support
-Plug 'gregsexton/gitv'
+Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'tpope/vim-fugitive'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'airblade/vim-gitgutter' "too slow trying vim-signify instead
@@ -202,17 +201,17 @@ let g:lightline = {
 set showtabline=2
 
 " Syntastic Configuration
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
-" let g:syntastic_check_on_wq = 0
-"
-let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
+" " let g:syntastic_check_on_wq = 0
+" "
+" let g:syntastic_javascript_checkers = ['eslint']
 
 
 " Vim-PDV Configuration 
