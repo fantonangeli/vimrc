@@ -56,6 +56,7 @@ Plug 'schickling/vim-bufonly'
 Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
 Plug 'tomtom/tlib_vim' "required by vim-snipmate
 Plug 'garbas/vim-snipmate'
+Plug 'godlygeek/tabular'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'tpope/vim-dispatch'
 " Plug 'rhysd/devdocs.vim'
