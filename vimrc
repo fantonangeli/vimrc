@@ -56,7 +56,6 @@ Plug 'schickling/vim-bufonly'
 Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
 Plug 'tomtom/tlib_vim' "required by vim-snipmate
 Plug 'garbas/vim-snipmate'
-Plug 'godlygeek/tabular'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'tpope/vim-dispatch'
 " Plug 'rhysd/devdocs.vim'
@@ -463,8 +462,6 @@ let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
 
 
-"fullscreen
-:set lines=999 columns=999
 
 "Switch buffers in vim without saving to a currently modified file
 :set hidden
