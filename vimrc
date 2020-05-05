@@ -21,6 +21,8 @@ set nofoldenable    " disable folding. 'zi' to toggle
 
 "set visualbell	" Use visual bell (no beeping)
 
+set showcmd
+
 "preserve my cursor position within a line when switching buffers
 autocmd BufEnter * silent! normal! g`"
 
