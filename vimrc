@@ -179,7 +179,8 @@ endif
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 " colorscheme holokai
-colorscheme spacegray
+" colorscheme spacegray
+colorscheme solarized8_light
 " colorscheme spacemacs-theme
  
 let g:spacegray_underline_search = 1
