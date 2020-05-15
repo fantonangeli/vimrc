@@ -88,6 +88,7 @@ Plug 'maksimr/vim-jsbeautify'
 " Git Support
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'tpope/vim-fugitive'
+Plug 'idanarye/vim-merginal'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'airblade/vim-gitgutter' "too slow trying vim-signify instead
 Plug 'mhinz/vim-signify'
@@ -373,6 +374,7 @@ command Cygwin !silent C:\cygwin64\bin\mintty.exe
 " Linux
 command Dolphin silent !dolphin %:p:h &
 command Xterm silent !xterm &
+command Meld silent !meld . &
 
 command U UndotreeToggle 
 command PU PlugUpdate 
