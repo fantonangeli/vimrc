@@ -276,6 +276,8 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " augroup END
 "
 
+" coc.nvim config
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Tagbar
 " let g:tagbar_autofocus=1
