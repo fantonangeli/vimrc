@@ -392,6 +392,9 @@ command JsxBeautify call JsxBeautify()
 command HtmlBeautify call HtmlBeautify()
 command CSSBeautify call CSSBeautify()
 
+"Overwrite a class from "c changing the name to the current one 
+command OverClass exe 'normal G"cpgg/classwyenwvepNNjva{Voggd'
+
 
 "MY KEYS---------------------------------------------------------- 
 
