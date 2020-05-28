@@ -23,6 +23,9 @@ set nofoldenable    " disable folding. 'zi' to toggle
 
 set showcmd
 
+"increment 0X numbers as decimals
+set nrformats-=octal
+
 "preserve my cursor position within a line when switching buffers
 autocmd BufEnter * silent! normal! g`"
 
