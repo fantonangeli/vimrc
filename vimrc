@@ -7,6 +7,9 @@ set encoding=utf8
 set guifont=FuraMono_NF:h10:cANSI:qDRAFT
 set ffs=unix,dos
 
+"Language
+language en_US
+
 set undofile
 set undodir=~/.vim/undo
 
