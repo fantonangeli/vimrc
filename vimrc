@@ -343,14 +343,14 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 "MY CMD --------------------------------------------------------
 if has("win32")
     command Vimrc e $HOME\.vim\vimrc\vimrc
-    command JsSnip e $HOME\.vim\snippets\javascript.snippets
-    command HtmlSnip e $HOME\.vim\snippets\html.snippets
-    command TypescriptSnip e $HOME\.vim\snippets\typescript.snippets
+    command JsSnips e $HOME\.vim\snippets\javascript.snippets
+    command HtmlSnips e $HOME\.vim\snippets\html.snippets
+    command TsSnips e $HOME\.vim\snippets\typescript.snippets
 else
     command Vimrc e $HOME/.vim/vimrc/vimrc
-    command JsSnip e $HOME/.vim/snippets/javascript.snippets
-    command HtmlSnip e $HOME/.vim/snippets/html.snippets
-    command TypescriptSnip e $HOME/.vim/snippets/typescript.snippets
+    command JsSnips e $HOME/.vim/snippets/javascript.snippets
+    command HtmlSnips e $HOME/.vim/snippets/html.snippets
+    command TsSnips e $HOME/.vim/snippets/typescript.snippets
 endif
 
 command WriteRandomNum :r! echo $RANDOM
