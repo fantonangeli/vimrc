@@ -92,8 +92,8 @@ Plug 'maksimr/vim-jsbeautify'
 " Plug 'LanguageTool'
 
 " Git Support
-Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog' "lightweight and powerful git branch viewer that integrates with fugitive
 Plug 'idanarye/vim-merginal'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'airblade/vim-gitgutter' "too slow trying vim-signify instead
