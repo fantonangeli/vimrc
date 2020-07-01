@@ -401,6 +401,9 @@ command CSSBeautify call CSSBeautify()
 "Overwrite a class from "c changing the name to the current one 
 command OverClass exe 'normal G"cpgg/classwyenwvepNNjva{Voggd'
 
+"show environments diff
+command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
+
 
 "MY KEYS---------------------------------------------------------- 
 
