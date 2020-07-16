@@ -404,6 +404,8 @@ command OverClass exe 'normal G"cpgg/classwyenwvepNNjva{Voggd'
 "show environments diff
 command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
 
+"Git stage everyting and open Gstatus
+command GA :Git add . | :G
 
 "MY KEYS---------------------------------------------------------- 
 
