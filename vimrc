@@ -82,6 +82,8 @@ Plug 'honza/vim-snippets'
 Plug 'Townk/vim-autoclose'
 Plug 'tomtom/tcomment_vim'
 " Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
+Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
 Plug 'Chiel92/vim-autoformat'
 Plug 'maksimr/vim-jsbeautify'
 
@@ -198,14 +200,30 @@ let g:lightline = {
       \ 'subseparator': { 'left': '', 'right': '' },
       \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
+      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head'
       \ },
-      \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
-      \ 'component_type': {'buffers': 'tabsel'},
+      \ 'component_expand': {
+      \  'buffers': 'lightline#bufferline#buffers',
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ },
+      \ 'component_type': {
+      \     'buffers': 'tabsel',
+      \     'linter_checking': 'right',
+      \     'linter_infos': 'right',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'right',
+      \ }
       \ }
 set showtabline=2
 
@@ -463,18 +481,13 @@ nnoremap <Leader>d :bd<CR>
 noremap <Leader>c :TComment<CR>
 
 
-"MY CONFIGS---------------------------------------------------------
 
-" jshint2
-" set runtimepath+=~/.vim/bundle/jshint2.vim/
-" "Lint JavaScript files after reading it:
-" " let jshint2_read = 1
-" "Lint JavaScript files after saving it:
-" let jshint2_save = 1
-" "Do not automatically close orphaned error lists:
-" "let jshint2_close = 0
-" "Skip lint confirmation for non JavaScript files:
-" "let jshint2_confirm = 0
+
+
+
+
+
+
 
 
 
@@ -482,6 +495,21 @@ noremap <Leader>c :TComment<CR>
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
+
+
+"ALE
+let g:ale_fixers = ['prettier', 'eslint']
+
+" Enable completion where available.
+" This setting must be set before ALE is loaded.
+"
+" You should not turn this setting on if you wish to use ALE as a completion
+" source for other completion plugins, like Deoplete.
+let g:ale_completion_enabled = 1
+
+set omnifunc=ale#completion#OmniFunc
+
+
 
 
 
@@ -509,9 +537,6 @@ let g:session_autosave = 'yes'
 let g:session_command_aliases = 1
 let g:session_default_to_last= 1
 let g:session_autoload = 'no'
-
-" Don't save hidden and unloaded buffers in sessions.
-set sessionoptions-=buffers
 
 "
 " "vim put swap files in a special location instead of the working directory of the file being edited
