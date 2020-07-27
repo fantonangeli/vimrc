@@ -134,7 +134,6 @@ Plug 'heavenshell/vim-jsdoc'
 " Plug 'othree/jsdoc-syntax.vim'
 " Plug 'ternjs/tern_for_vim'
 Plug 'tacahiroy/ctrlp-funky'
-" Plug 'Shutnik/jshint2.vim' commented: i have already syntastic
 Plug 'leafgarland/typescript-vim'
 " Plug 'agarrharr/consolation-vim'
 
@@ -510,6 +509,9 @@ let g:session_autosave = 'yes'
 let g:session_command_aliases = 1
 let g:session_default_to_last= 1
 let g:session_autoload = 'no'
+
+" Don't save hidden and unloaded buffers in sessions.
+set sessionoptions-=buffers
 
 "
 " "vim put swap files in a special location instead of the working directory of the file being edited
