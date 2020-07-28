@@ -424,6 +424,8 @@ command EnvDiff e src/environments/environment.ts | vert diffsplit src/environme
 "Git stage everyting and open Gstatus
 command GA :Git add . | :G
 
+command M :Merginal
+
 "MY KEYS---------------------------------------------------------- 
 
 "Switch between Vim window splits easily
