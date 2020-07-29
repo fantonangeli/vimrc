@@ -359,12 +359,12 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 "MY CMD --------------------------------------------------------
 if has("win32")
-    command Vimrc e $HOME\.vim\vimrc\vimrc
+    command Vimrc e $HOME\.vim\vimrc\vimrc | setfiletype vim
     command JsSnips e $HOME\.vim\snippets\javascript.snippets
     command HtmlSnips e $HOME\.vim\snippets\html.snippets
     command TsSnips e $HOME\.vim\snippets\typescript.snippets
 else
-    command Vimrc e $HOME/.vim/vimrc/vimrc
+    command Vimrc e $HOME/.vim/vimrc/vimrc | setfiletype vim
     command JsSnips e $HOME/.vim/snippets/javascript.snippets
     command HtmlSnips e $HOME/.vim/snippets/html.snippets
     command TsSnips e $HOME/.vim/snippets/typescript.snippets
