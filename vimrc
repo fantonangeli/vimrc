@@ -532,7 +532,7 @@ set omnifunc=ale#completion#OmniFunc
 let g:ctrlp_extensions = ['tag']
 
 "ctrlp ignore node_modules
-let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|git\|dist'
+let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|git\|dist\|backstop_data'
 
 "vim-session
 let g:session_autosave = 'yes'
