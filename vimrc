@@ -377,7 +377,7 @@ command TODOS VGFE "(TODO\|BUG)"
 command -nargs=1 VGALL VG <args> *
 
 " Grep commands
-command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts}
+command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json}
 command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,.git,dist,build,backstop_data}* --exclude="package-lock.json" -E <args> | copen | cc1 | ex
 
 " Vimgrep commands
