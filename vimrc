@@ -422,7 +422,7 @@ command OverClass exe 'normal G"cpgg/classwyenwvepNNjva{Voggd'
 command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
 
 "Git stage everyting and open Gstatus
-command GA :Git add . | :G
+command GA :wa | :Git add . | :G
 
 command M :Merginal
 
@@ -507,7 +507,7 @@ let g:ale_fixers = ['prettier', 'eslint']
 "
 " You should not turn this setting on if you wish to use ALE as a completion
 " source for other completion plugins, like Deoplete.
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 
 set omnifunc=ale#completion#OmniFunc
 
