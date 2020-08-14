@@ -83,7 +83,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'tomtom/tcomment_vim'
 " Plug 'vim-syntastic/syntastic'
 Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
-Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
+" Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
 Plug 'Chiel92/vim-autoformat'
 Plug 'maksimr/vim-jsbeautify'
 
@@ -121,7 +121,7 @@ Plug 'daylerees/colour-schemes'
 Plug 'colepeters/spacemacs-theme.vim'
 " Plug 'altercation/vim-colors-solarized'
 Plug 'flazz/vim-colorschemes'
-" Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-colorscheme-switcher'
 
 " Javascript
 Plug 'heavenshell/vim-jsdoc'
