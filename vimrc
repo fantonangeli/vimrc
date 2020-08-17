@@ -405,7 +405,7 @@ command Cmd !start cmd
 command Cygwin !silent C:\cygwin64\bin\mintty.exe
 
 " Linux
-command Dolphin silent !dolphin %:p:h &
+command Dolphin silent !dolphin "%:p:h" &
 command Xterm silent !xterm &
 command Meld silent !meld . &
 
