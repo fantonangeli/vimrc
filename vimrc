@@ -413,7 +413,8 @@ command U UndotreeToggle
 command PU PlugUpdate 
 command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
-command CopyFilePath let @+=expand("%:.")
+command CopyFileRelPath let @+=expand("%:.")
+command CopyFileFullPath let @+=expand("%:p")
 " command -nargs=1 OS OpenSession <args> | Cmd
 
 "MY JsBeautify CMD
