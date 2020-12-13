@@ -482,7 +482,7 @@ nnoremap <Leader>vf va{V<Cr>
 "copy function
 nnoremap <Leader>yf va{Vy<Cr>
 "copy all 
-nnoremap <Leader>ya ggVGy<cr>
+nnoremap <Leader>ya ggVGy'.<cr>
 "paste+indent
 nnoremap <Leader>p p=`]<cr>
 "paste over all
