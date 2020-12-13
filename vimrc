@@ -383,6 +383,7 @@ command Time put =strftime('%Y-%m-%d %H:%M')
 command PutTodoText :normal Vp$xxx^df:x0dw
 command TODOS VGFE "(TODO\|BUG)" 
 command -nargs=1 VGALL VG <args> *
+command JsExec :w !node
 
 " Grep commands
 command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json}
