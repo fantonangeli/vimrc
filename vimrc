@@ -438,7 +438,7 @@ command EnvDiff e src/environments/environment.ts | vert diffsplit src/environme
 
 "Git stage everyting and open Gstatus
 command GA :wa | :Git add . | :G
-
+command F :Flog
 command M :Merginal
 
 "MY KEYS---------------------------------------------------------- 
