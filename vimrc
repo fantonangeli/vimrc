@@ -376,6 +376,8 @@ else
     command JsSnips e $HOME/.vim/snippets/javascript.snippets
     command HtmlSnips e $HOME/.vim/snippets/html.snippets
     command TsSnips e $HOME/.vim/snippets/typescript.snippets
+
+    autocmd SessionLoadPost * silent !master-notify.sh & 
 endif
 
 command WriteRandomNum :r! echo $RANDOM
