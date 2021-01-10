@@ -86,6 +86,7 @@ Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
 " Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
 Plug 'Chiel92/vim-autoformat'
 Plug 'maksimr/vim-jsbeautify'
+Plug 'metakirby5/codi.vim'
 
 
 " Markdown / Writting
