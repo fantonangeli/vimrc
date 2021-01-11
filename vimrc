@@ -490,6 +490,8 @@ nnoremap <Leader>yf va{Vy<Cr>
 nnoremap <Leader>ya ggVGy'.<cr>
 "paste+indent
 nnoremap <Leader>p p=`]<cr>
+"paste before+indent
+nnoremap <Leader>P P=`]<cr>
 "paste over all
 nnoremap <Leader>pa ggVGp<cr>
 "close buffer
