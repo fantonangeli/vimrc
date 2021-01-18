@@ -71,7 +71,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'drmikehenry/vim-fontsize' "Adjust font size via keypresses
 Plug 'mbbill/undotree'
-" Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-abolish'
 
 " Plug 'ajh17/VimCompletesMe'
@@ -369,7 +369,7 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 
 
-
+" |MY CMD|
 "MY CMD --------------------------------------------------------
 "Windows commands
 if has("win32")
@@ -574,6 +574,6 @@ let g:session_autoload = 'no'
 set directory=~/.vim/swap/
 
 "gutentags
-" set tags=./.tags,.tags
-" let g:gutentags_ctags_tagfile=".tags"
-" let g:gutentags_ctags_exclude = ['bower_components', 'node_modules', 'build', 'dist']
+set tags=./.tags,.tags
+let g:gutentags_ctags_tagfile=".tags"
+let g:gutentags_ctags_exclude = ['bower_components', 'node_modules', 'build', 'dist']
