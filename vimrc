@@ -319,6 +319,10 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 let g:ctrlp_cmd = 'CtrlPCurWD'
 
 
+" vim-snipmate config
+let g:snipMate = { 'snippet_version' : 1 } "parser version
+
+
 """""""""""""""""""""""""""""""""""""
 " Mappings configurationn
 """""""""""""""""""""""""""""""""""""
