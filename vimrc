@@ -1,3 +1,5 @@
+" General Configs {{{
+
 set nocompatible
 syntax on
 "set nowrap
@@ -45,17 +47,13 @@ else
     " grep program
     set grepprg=grep\ -n\ $*
 endif
+" }}}
 
-"""" START vim-plug Configuration 
+" vim-plug Configuration {{{
 
 call plug#begin('~/.vim/plugged')
 
-
-
-" let Vundle manage Vundle, required
-" Plug 'gmarik/Vundle.vim'
-
-" Utility
+" Utility 
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'majutsushi/tagbar'
 Plug 'ervandew/supertab'
@@ -145,11 +143,9 @@ Plug 'vim-scripts/JSON.vim'
 
 
 call plug#end()
-"""" END vim-plug Configuration 
+" }}}
 
-"""""""""""""""""""""""""""""""""""""
-" Configuration Section
-"""""""""""""""""""""""""""""""""""""
+" Configuration Section {{{
 
 " Show linenumbers
 set number
@@ -183,11 +179,16 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 " colorscheme spacegray
 colorscheme solarized8_light
 " colorscheme spacemacs-theme
+" " }}}
  
+" Spacegray  {{{
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
+" }}}
 
-" lightline without ALE
+" Lightline {{{
+
+" lightline with ALE
 " let g:lightline = {
 "       \ 'separator': { 'left': '', 'right': '' },
 "       \ 'subseparator': { 'left': '', 'right': '' },
@@ -235,8 +236,9 @@ let g:lightline = {
       \ 'component_type': {'buffers': 'tabsel'},
       \ }
 set showtabline=2
+" }}}
 
-" Syntastic Configuration
+" Syntastic Configuration {{{
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
@@ -248,13 +250,15 @@ set showtabline=2
 " " let g:syntastic_check_on_wq = 0
 " "
 " let g:syntastic_javascript_checkers = ['eslint']
+" }}}
 
+" FileType specific configs {{{
 
-" Vim-PDV Configuration 
-" let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-
-" " NerdTree
-" let g:NERDTreeWinSize=60
+" VIMRC
+augroup vimrc
+    au!
+    au BufNewFile,BufRead vimrc setlocal foldmethod=marker
+augroup END
 
 " SCSS
 augroup scss
@@ -292,41 +296,29 @@ augroup typescript
     au BufNewFile,BufRead *.ts setlocal filetype=typescript
 augroup END
 
+" }}}
 
-" Vim-Supertab Configuration
+" Vim-Supertab Configuration {{{
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+" }}}
 
-" " Settings for Writting
-" let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
-" let g:languagetool_jar  = '/opt/languagetool/languagetool-commandline.jar'
-
-" Vim-pencil Configuration
-" augroup pencil
-"   autocmd!
-"   autocmd FileType markdown,mkd call pencil#init()
-"   autocmd FileType text         call pencil#init()
-" augroup END
-"
-
-" coc.nvim config
+" coc.nvim config {{{
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" }}}
 
-" Tagbar
+" Tagbar {{{
 " let g:tagbar_autofocus=1
+" }}}
 
-
-" CtrlP config
+" CtrlP config {{{
 let g:ctrlp_cmd = 'CtrlPCurWD'
+" }}} 
 
+" vim-snipmate config {{{
+let g:snipMate = { 'snippet_version' : 1 } "parser versio" }}}
 
-" vim-snipmate config
-let g:snipMate = { 'snippet_version' : 1 } "parser version
-
-
-"""""""""""""""""""""""""""""""""""""
-" Mappings configurationn
-"""""""""""""""""""""""""""""""""""""
-map <C-n> :NERDTreeToggle<CR>
+" Mappings configurationn {{{
+"
 " map <C-m> :TagbarToggle<CR>
 " noremap <C-m> :CtrlPFunky<CR>
 
@@ -364,13 +356,9 @@ endif
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 " Advanced customization using autoload functions
-"inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+"inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})" }}}
 
-
-
-
-" |MY CMD|
-"MY CMD --------------------------------------------------------
+"MY CMD {{{
 "Windows commands
 if has("win32")
     command Vimrc e $HOME\.vim\vimrc\vimrc | setfiletype vim
@@ -510,24 +498,15 @@ nnoremap <Leader>d :bd<CR>
 "TComment
 noremap <Leader>c :TComment<CR>
 
+" }}}
 
-
-
-
-
-
-
-
-
-
-
-"jsdoc
+"jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
+"}}}
 
-
-"ALE
+"ALE {{{
 let g:ale_fixers = ['prettier', 'eslint']
 
 " Enable completion where available.
@@ -538,10 +517,9 @@ let g:ale_fixers = ['prettier', 'eslint']
 " let g:ale_completion_enabled = 1
 
 set omnifunc=ale#completion#OmniFunc
+"}}}
 
-
-
-
+" General config {{{
 
 "Switch buffers in vim without saving to a currently modified file
 :set hidden
@@ -555,25 +533,29 @@ set omnifunc=ale#completion#OmniFunc
 "Setting 'scrolloff' to a large value causes the cursor to stay in the middle line when possible:
 :set so=999
 "To restore normal behavior, enter:
-":set so=0
+":set so=0" }}}
 
+" CtrlP {{{
 let g:ctrlp_extensions = ['tag']
 
 "ctrlp ignore node_modules
 let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|git\|dist\|backstop_data'
+" }}}
 
-"vim-session
+"vim-session {{{
 let g:session_autosave = 'yes'
 let g:session_command_aliases = 1
 let g:session_default_to_last= 1
 let g:session_autoload = 'no'
+" }}}
 
-"
+" General config {{{
 " "vim put swap files in a special location instead of the working directory of the file being edited
-" "crasha!!!
-set directory=~/.vim/swap/
+set directory=~/.vim/swap
+" }}} 
 
-"gutentags
+"gutentags {{{
 set tags=./.tags,.tags
 let g:gutentags_ctags_tagfile=".tags"
 let g:gutentags_ctags_exclude = ['bower_components', 'node_modules', 'build', 'dist']
+" }}}
