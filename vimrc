@@ -22,7 +22,7 @@ set hlsearch
 
 set incsearch "Incremental search
 
-set nofoldenable    " disable folding. 'zi' to toggle
+" set nofoldenable    " disable folding. 'zi' to toggle
 
 "set visualbell	" Use visual bell (no beeping)
 
