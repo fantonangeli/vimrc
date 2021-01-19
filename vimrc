@@ -1,4 +1,4 @@
-" General Configs {{{
+" GENERAL CONFIGS {{{
 
 set nocompatible
 syntax on
@@ -34,6 +34,52 @@ set nrformats-=octal
 "preserve my cursor position within a line when switching buffers
 autocmd BufEnter * silent! normal! g`"
 
+"Switch buffers in vim without saving to a currently modified file
+:set hidden
+
+"case sensitive search
+" :set ic
+
+"To allow backspacing over everything in insert mode (including automatically inserted indentation, line breaks and start of insert)
+:set backspace=indent,eol,start
+
+"Setting 'scrolloff' to a large value causes the cursor to stay in the middle line when possible:
+:set so=999
+"To restore normal behavior, enter:
+":set so=0
+
+" "vim put swap files in a special location instead of the working directory of the file being edited
+set directory=~/.vim/swap
+
+" Show linenumbers
+set number
+set ruler
+
+" Set Proper Tabs
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+
+" Always display the status line
+set laststatus=2
+
+" Enable Elite mode, No ARRRROWWS!!!!
+let g:elite_mode=1
+
+" Enable highlighting of the current line
+set cursorline
+
+" Theme and Styling 
+set t_Co=256
+set background=dark
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+let base16colorspace=256  " Access colors present in 256 colorspace
+
 if has("win32")
     "Clipboard
     set clipboard=unnamed
@@ -47,16 +93,17 @@ else
     " grep program
     set grepprg=grep\ -n\ $*
 endif
+
 " }}}
 
-" vim-plug Configuration {{{
+" VIM-PLUG CONFIGURATION {{{
 
 call plug#begin('~/.vim/plugged')
 
 " Utility 
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'majutsushi/tagbar'
-Plug 'ervandew/supertab'
+Plug 'ervandew/supertab' "allows you to use <Tab> for all your insert completion needs
 Plug 'schickling/vim-bufonly'
 " Plug 'wesQ3/vim-windowswap'
 Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
@@ -145,114 +192,7 @@ Plug 'vim-scripts/JSON.vim'
 call plug#end()
 " }}}
 
-" Configuration Section {{{
-
-" Show linenumbers
-set number
-set ruler
-
-" Set Proper Tabs
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
-
-" Always display the status line
-set laststatus=2
-
-" Enable Elite mode, No ARRRROWWS!!!!
-let g:elite_mode=1
-
-" Enable highlighting of the current line
-set cursorline
-
-" Theme and Styling 
-set t_Co=256
-set background=dark
-
-if (has("termguicolors"))
-  set termguicolors
-endif
-
-let base16colorspace=256  " Access colors present in 256 colorspace
-" colorscheme holokai
-" colorscheme spacegray
-colorscheme solarized8_light
-" colorscheme spacemacs-theme
-" " }}}
- 
-" Spacegray  {{{
-let g:spacegray_underline_search = 1
-let g:spacegray_italicize_comments = 1
-" }}}
-
-" Lightline {{{
-
-" lightline with ALE
-" let g:lightline = {
-"       \ 'separator': { 'left': '', 'right': '' },
-"       \ 'subseparator': { 'left': '', 'right': '' },
-"       \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
-"       \ 'active': {
-"       \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
-"       \   'right': [ [ 'lineinfo' ],
-"       \              [ 'percent' ],
-"       \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
-"       \ },
-"       \ 'component_function': {
-"       \   'gitbranch': 'fugitive#head'
-"       \ },
-"       \ 'component_expand': {
-"       \  'buffers': 'lightline#bufferline#buffers',
-"       \  'linter_checking': 'lightline#ale#checking',
-"       \  'linter_infos': 'lightline#ale#infos',
-"       \  'linter_warnings': 'lightline#ale#warnings',
-"       \  'linter_errors': 'lightline#ale#errors',
-"       \  'linter_ok': 'lightline#ale#ok',
-"       \ },
-"       \ 'component_type': {
-"       \     'buffers': 'tabsel',
-"       \     'linter_checking': 'right',
-"       \     'linter_infos': 'right',
-"       \     'linter_warnings': 'warning',
-"       \     'linter_errors': 'error',
-"       \     'linter_ok': 'right',
-"       \ }
-"       \ }
-
-" lightline without ALE
-let g:lightline = {
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' },
-      \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
-      \ 'component_type': {'buffers': 'tabsel'},
-      \ }
-set showtabline=2
-" }}}
-
-" Syntastic Configuration {{{
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
-" " let g:syntastic_check_on_wq = 0
-" "
-" let g:syntastic_javascript_checkers = ['eslint']
-" }}}
-
-" FileType specific configs {{{
+" FILETYPE SPECIFIC CONFIGS {{{
 
 " VIMRC
 augroup vimrc
@@ -298,26 +238,7 @@ augroup END
 
 " }}}
 
-" Vim-Supertab Configuration {{{
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-" }}}
-
-" coc.nvim config {{{
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-" }}}
-
-" Tagbar {{{
-" let g:tagbar_autofocus=1
-" }}}
-
-" CtrlP config {{{
-let g:ctrlp_cmd = 'CtrlPCurWD'
-" }}} 
-
-" vim-snipmate config {{{
-let g:snipMate = { 'snippet_version' : 1 } "parser versio" }}}
-
-" Mappings configurationn {{{
+" MAPPINGS CONFIGURATIONN {{{
 "
 " map <C-m> :TagbarToggle<CR>
 " noremap <C-m> :CtrlPFunky<CR>
@@ -358,7 +279,7 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 " Advanced customization using autoload functions
 "inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})" }}}
 
-"MY CMD {{{
+" MY CMD {{{
 "Windows commands
 if has("win32")
     command Vimrc e $HOME\.vim\vimrc\vimrc | setfiletype vim
@@ -500,13 +421,96 @@ noremap <Leader>c :TComment<CR>
 
 " }}}
 
-"jsdoc {{{
+" PLUGINS SETTINGS {{{
+
+" Colorscheme{{{
+    "
+" colorscheme holokai
+" colorscheme spacegray
+colorscheme solarized8_light
+" colorscheme spacemacs-theme
+
+" }}}
+
+" Spacegray  {{{
+let g:spacegray_underline_search = 1
+let g:spacegray_italicize_comments = 1
+" }}}
+
+" Lightline {{{
+
+" lightline with ALE
+" let g:lightline = {
+"       \ 'separator': { 'left': '', 'right': '' },
+"       \ 'subseparator': { 'left': '', 'right': '' },
+"       \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
+"       \   'right': [ [ 'lineinfo' ],
+"       \              [ 'percent' ],
+"       \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'gitbranch': 'fugitive#head'
+"       \ },
+"       \ 'component_expand': {
+"       \  'buffers': 'lightline#bufferline#buffers',
+"       \  'linter_checking': 'lightline#ale#checking',
+"       \  'linter_infos': 'lightline#ale#infos',
+"       \  'linter_warnings': 'lightline#ale#warnings',
+"       \  'linter_errors': 'lightline#ale#errors',
+"       \  'linter_ok': 'lightline#ale#ok',
+"       \ },
+"       \ 'component_type': {
+"       \     'buffers': 'tabsel',
+"       \     'linter_checking': 'right',
+"       \     'linter_infos': 'right',
+"       \     'linter_warnings': 'warning',
+"       \     'linter_errors': 'error',
+"       \     'linter_ok': 'right',
+"       \ }
+"       \ }
+
+" lightline without ALE
+let g:lightline = {
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' },
+      \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
+      \ 'component_type': {'buffers': 'tabsel'},
+      \ }
+set showtabline=2
+" }}}
+
+" Vim-Supertab Configuration {{{
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+" }}}
+
+" coc.nvim config {{{
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" }}}
+
+" CtrlP config {{{
+let g:ctrlp_cmd = 'CtrlPCurWD'
+" }}} 
+
+" vim-snipmate config {{{
+let g:snipMate = { 'snippet_version' : 1 } "parser versio" }}}
+
+" jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
 "}}}
 
-"ALE {{{
+" ALE {{{
 let g:ale_fixers = ['prettier', 'eslint']
 
 " Enable completion where available.
@@ -519,21 +523,11 @@ let g:ale_fixers = ['prettier', 'eslint']
 set omnifunc=ale#completion#OmniFunc
 "}}}
 
-" General config {{{
-
-"Switch buffers in vim without saving to a currently modified file
-:set hidden
-
-"case sensitive search
-" :set ic
-
-"To allow backspacing over everything in insert mode (including automatically inserted indentation, line breaks and start of insert)
-:set backspace=indent,eol,start
-
-"Setting 'scrolloff' to a large value causes the cursor to stay in the middle line when possible:
-:set so=999
-"To restore normal behavior, enter:
-":set so=0" }}}
+" gutentags {{{
+set tags=./.tags,.tags
+let g:gutentags_ctags_tagfile=".tags"
+let g:gutentags_ctags_exclude = ['bower_components', 'node_modules', 'build', 'dist']
+" }}}
 
 " CtrlP {{{
 let g:ctrlp_extensions = ['tag']
@@ -542,20 +536,34 @@ let g:ctrlp_extensions = ['tag']
 let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|git\|dist\|backstop_data'
 " }}}
 
-"vim-session {{{
+" vim-session {{{
 let g:session_autosave = 'yes'
 let g:session_command_aliases = 1
 let g:session_default_to_last= 1
 let g:session_autoload = 'no'
 " }}}
 
-" General config {{{
-" "vim put swap files in a special location instead of the working directory of the file being edited
-set directory=~/.vim/swap
-" }}} 
-
-"gutentags {{{
-set tags=./.tags,.tags
-let g:gutentags_ctags_tagfile=".tags"
-let g:gutentags_ctags_exclude = ['bower_components', 'node_modules', 'build', 'dist']
 " }}}
+
+" UNUSED PLUGINS SETTINGS {{{
+
+" Syntastic Configuration {{{
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
+" " let g:syntastic_check_on_wq = 0
+" "
+" let g:syntastic_javascript_checkers = ['eslint']
+" }}}
+
+" Tagbar {{{
+" let g:tagbar_autofocus=1
+" }}}
+
+" }}}
+
