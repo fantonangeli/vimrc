@@ -292,8 +292,6 @@ else
     command JsSnips e $HOME/.vim/snippets/javascript.snippets
     command HtmlSnips e $HOME/.vim/snippets/html.snippets
     command TsSnips e $HOME/.vim/snippets/typescript.snippets
-
-    autocmd SessionLoadPost * silent !master-notify.sh & xterm &
 endif
 
 command WriteRandomNum :r! echo $RANDOM
@@ -541,6 +539,11 @@ let g:session_autosave = 'yes'
 let g:session_command_aliases = 1
 let g:session_default_to_last= 1
 let g:session_autoload = 'no'
+
+if has("unix")
+    autocmd SessionLoadPost * silent !master-notify.sh & 
+endif
+
 " }}}
 
 " }}}
