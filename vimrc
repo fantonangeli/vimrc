@@ -304,6 +304,7 @@ endif
 
 command WriteRandomNum :r! echo $RANDOM
 command Time put =strftime('%Y-%m-%d %H:%M')
+command Date put =strftime('%Y-%m-%d')
 command PutTodoText :normal Vp$xxx^df:x0dw
 command TODOS VGFE "(TODO\|BUG)" 
 command -nargs=1 VGALL VG <args> *
