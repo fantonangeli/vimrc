@@ -280,18 +280,26 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 "inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})" }}}
 
 " MY CMD {{{
-"Windows commands
 if has("win32")
+    "Windows commands
     command Vimrc e $HOME\.vim\vimrc\vimrc | setfiletype vim
     command JsSnips e $HOME\.vim\snippets\javascript.snippets
     command HtmlSnips e $HOME\.vim\snippets\html.snippets
     command TsSnips e $HOME\.vim\snippets\typescript.snippets
-"Linux commands
+
+    command Explorer !start explorer %:p:h:gs?\/?\\\\\\?
+    command Cmd !start cmd
+    command Cygwin !silent C:\cygwin64\bin\mintty.exe
 else
+    "Linux commands
     command Vimrc e $HOME/.vim/vimrc/vimrc | setfiletype vim
     command JsSnips e $HOME/.vim/snippets/javascript.snippets
     command HtmlSnips e $HOME/.vim/snippets/html.snippets
     command TsSnips e $HOME/.vim/snippets/typescript.snippets
+
+    command Dolphin silent !dolphin "%:p:h" &
+    command Xterm silent !xterm &
+    command Meld silent !meld . &
 endif
 
 command WriteRandomNum :r! echo $RANDOM
@@ -317,15 +325,6 @@ command Backtick :normal a``
 command Tilde :normal a~
 command -nargs=1 TSF tabnew | setfiletype <args> 
 
-" Windows
-command Explorer !start explorer %:p:h:gs?\/?\\\\\\?
-command Cmd !start cmd
-command Cygwin !silent C:\cygwin64\bin\mintty.exe
-
-" Linux
-command Dolphin silent !dolphin "%:p:h" &
-command Xterm silent !xterm &
-command Meld silent !meld . &
 
 command U UndotreeToggle 
 command PU PlugUpdate 
