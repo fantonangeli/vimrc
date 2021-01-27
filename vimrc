@@ -303,8 +303,8 @@ else
 endif
 
 command WriteRandomNum :r! echo $RANDOM
-command Time put =strftime('%Y-%m-%d %H:%M')
-command Date put =strftime('%Y-%m-%d')
+command Time :normal a<C-R>=strftime('%F %H:%M:%S')<CR>
+command Date :normal a<C-R>=strftime('%F')<CR>
 command PutTodoText :normal Vp$xxx^df:x0dw
 command TODOS VGFE "(TODO\|BUG)" 
 command -nargs=1 VGALL VG <args> *
