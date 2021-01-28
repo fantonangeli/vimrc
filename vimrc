@@ -306,14 +306,15 @@ command WriteRandomNum :r! echo $RANDOM
 command Time :normal a<C-R>=strftime('%F %H:%M:%S')<CR>
 command Date :normal a<C-R>=strftime('%F')<CR>
 command PutTodoText :normal Vp$xxx^df:x0dw
-command TODOS VGFE "(TODO\|BUG)" 
-command -nargs=1 VGALL VG <args> *
 command JsExec :w !node
 command GPOG :Gpush origin | Gpush github
 
 " Grep commands
-command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json}
 command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" -E <args> | copen | cc1 | ex
+command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json}
+command TODOS VGFE "(TODO\|BUG)" 
+command FindThisFile VG %:t
+" command -nargs=1 VGALL VG <args> *
 
 " Vimgrep commands
 " command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts}
