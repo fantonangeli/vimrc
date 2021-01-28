@@ -15,7 +15,7 @@ language en_US
 set undofile
 set undodir=~/.vim/undo
 
-set wildignore+=*.o,*.obj,*.bak,*.exe,*.jpg,*.jpeg,*.png,*.gif,*.tiff,*.woff,*.eof,*.woff2,*.ttf,*.doc,*.docx,*.pdf,node_modules/**,bower_components/**,.*/**,yarn.lock,package-lock.json,build/**,dist/**,backstop_data/**
+set wildignore+=*.o,*.obj,*.bak,*.exe,*.svg,*.jpg,*.jpeg,*.png,*.gif,*.tiff,*.woff,*.eof,*.woff2,*.ttf,*.doc,*.docx,*.pdf,node_modules/**,bower_components/**,.*/**,yarn.lock,package-lock.json,build/**,dist/**,backstop_data/**
 
 "highlight all occurrence of a selected word
 set hlsearch
