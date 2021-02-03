@@ -410,6 +410,9 @@ nnoremap <Leader>P P=`]<cr>
 nnoremap <Leader>pa ggVGp<cr>
 "close buffer
 nnoremap <Leader>d :bd<CR>
+" ALEGoToDefinition
+nnoremap <Leader>gd :ALEGoToDefinition<CR>
+
 
 "save current buffer
 " nnoremap <Leader>s :update<cr>
