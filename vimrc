@@ -56,10 +56,10 @@ set number
 set ruler
 
 " Set Proper Tabs
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
+set tabstop=4   "number of space characters that will be inserted when the tab key is pressed
+set shiftwidth=4	"number of space characters inserted for indentation
+set smarttab	"affects how <TAB> key presses are interpreted depending on where the cursor is
+set expandtab   "To insert space characters whenever the tab key is pressed
 
 " Always display the status line
 set laststatus=2
@@ -233,7 +233,7 @@ augroup END
 " typescript
 augroup typescript
     au!
-    au BufNewFile,BufRead *.ts setlocal filetype=typescript
+    au BufNewFile,BufRead *.ts setlocal filetype=typescript tabstop=2 shiftwidth=2 softtabstop=0 expandtab
 augroup END
 
 " }}}
