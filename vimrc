@@ -410,6 +410,8 @@ nnoremap <Leader>P P=`]<cr>
 nnoremap <Leader>pa ggVGp<cr>
 "close buffer
 nnoremap <Leader>d :bd<CR>
+" ALENext
+nnoremap <Leader>an :ALENext<CR>
 " ALEGoToDefinition
 nnoremap <Leader>gd :ALEGoToDefinition<CR>
 
