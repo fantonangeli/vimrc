@@ -514,6 +514,7 @@ let g:jsdoc_enable_es6 = 1
 
 " ALE {{{
 let g:ale_fixers = ['prettier', 'eslint']
+let g:ale_set_highlights=0 "When this option is set to `1`, highlights will be set for problems.
 
 " Enable completion where available.
 " This setting must be set before ALE is loaded.
