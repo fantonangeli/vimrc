@@ -230,6 +230,12 @@ augroup javascript
     au BufNewFile,BufRead *.gs,*.js setlocal filetype=javascript
 augroup END
 
+" typescriptreact
+augroup typescriptreact
+    au!
+    au BufNewFile,BufRead *.ts setlocal filetype=typescriptreact tabstop=2 shiftwidth=2 softtabstop=0 expandtab
+augroup END
+
 " typescript
 augroup typescript
     au!
