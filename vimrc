@@ -23,6 +23,8 @@ set hlsearch
 set incsearch "Incremental search
 
 " set nofoldenable    " disable folding. 'zi' to toggle
+set foldmethod=indent
+set foldlevel=20
 
 "set visualbell	" Use visual bell (no beeping)
 
