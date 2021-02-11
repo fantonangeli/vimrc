@@ -232,16 +232,10 @@ augroup javascript
     au BufNewFile,BufRead *.gs,*.js setlocal filetype=javascript
 augroup END
 
-" typescriptreact
-augroup typescriptreact
-    au!
-    au BufNewFile,BufRead *.ts setlocal filetype=typescriptreact tabstop=2 shiftwidth=2 softtabstop=0 expandtab
-augroup END
-
 " typescript
 augroup typescript
     au!
-    au BufNewFile,BufRead *.ts setlocal filetype=typescript tabstop=2 shiftwidth=2 softtabstop=0 expandtab
+    au BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript tabstop=2 shiftwidth=2 softtabstop=0 expandtab
 augroup END
 
 " }}}
@@ -320,7 +314,8 @@ command GPOG :Gpush origin | Gpush github
 " Grep commands
 command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" -E <args> | copen | cc1 | ex   "search in current project
 command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}   "execute VG only on frontend files
-command VGSEL :execute "VG ".@*     "find current selection in the project
+"find current selection in the project
+command VGSEL :execute "VG ".@*     
 command TODOS VGFE "(TODO\|BUG)"    "search and list all TODOS and BUGS
 command FindThisFile VG %:t     "search this file in the project
 
