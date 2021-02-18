@@ -312,7 +312,7 @@ command JsExec :w !node
 command GPOG :Gpush origin | Gpush github
 
 " Grep commands
-command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" -E <args> | copen | cc1 | ex   "search in current project
+command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" -E <args> | call OpenQuickfix()   "search in current project
 command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}   "execute VG only on frontend files
 "find current selection in the project
 command VGSEL :execute "VG ".@*     
@@ -413,6 +413,8 @@ nnoremap <Leader>P P=`]<cr>
 nnoremap <Leader>pa ggVGp<cr>
 "close buffer
 nnoremap <Leader>d :bd<CR>
+" Lint
+nnoremap <Leader>l :call Lint()<CR>
 " ALENext
 nnoremap <Leader>an :ALENext<CR>
 " ALEFix
@@ -564,25 +566,25 @@ endif
 
 " }}}
 
-" UNUSED PLUGINS SETTINGS {{{
+" FUNCTION {{{
+" lint code and open location list with mappings
+function! Lint()
+    ALELint
+    lopen
+    map <C-j> :lnext<cr>
+    map <C-k> :lprev<cr>
+    map <C-x> :lcl<cr>
+endfunction
 
-" Syntastic Configuration {{{
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
-" " let g:syntastic_check_on_wq = 0
-" "
-" let g:syntastic_javascript_checkers = ['eslint']
-" }}}
-
-" Tagbar {{{
-" let g:tagbar_autofocus=1
-" }}}
+" open quickfix with mappings
+function! OpenQuickfix()
+    :copen
+    :cc1
+    :ex
+    map <C-j> :cn<cr>
+    map <C-k> :cp<cr>
+    map <C-x> :ccl<cr>
+endfunction
 
 " }}}
 
