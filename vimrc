@@ -426,6 +426,8 @@ nnoremap <Leader>af :ALEFix<CR>
 nnoremap <Leader>gd :ALEGoToDefinition<CR>
 " JsDoc
 nnoremap <Leader>jd :JsDoc<CR>
+" write param doc
+nnoremap <Leader>jp ^vEEEy/<C-r> yyVp<cr>
 
 
 "save current buffer
