@@ -312,11 +312,14 @@ command JsExec :w !node
 command GPOG :Gpush origin | Gpush github
 
 " Grep commands
-command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" -E <args> | call OpenQuickfix()   "search in current project
-command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}   "execute VG only on frontend files
+"search in current project
+command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" -E <args> | call OpenQuickfix()
+"execute VG only on frontend files
+command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 "find current selection in the project
 command VGSEL :execute "VG ".@*     
-command TODOS VGFE "(TODO\|BUG)"    "search and list all TODOS and BUGS
+"search and list all TODOS and BUGS
+command TODOS VGFE (TODO\|BUG)
 command FindThisFile VG %:t     "search this file in the project
 
 " Vimgrep commands
@@ -421,6 +424,8 @@ nnoremap <Leader>an :ALENext<CR>
 nnoremap <Leader>af :ALEFix<CR>
 " ALEGoToDefinition
 nnoremap <Leader>gd :ALEGoToDefinition<CR>
+" JsDoc
+nnoremap <Leader>jd :JsDoc<CR>
 
 
 "save current buffer
