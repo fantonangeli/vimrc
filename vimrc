@@ -428,6 +428,8 @@ nnoremap <Leader>gd :ALEGoToDefinition<CR>
 nnoremap <Leader>jd :JsDoc<CR>
 " write param doc
 nnoremap <Leader>jp ^vEEEy/<C-r> yyVp<cr>
+" search with google
+vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
 
 
 "save current buffer
@@ -593,5 +595,10 @@ function! OpenQuickfix()
     map <C-x> :ccl<cr>
 endfunction
 
+" search with google
+function! GoogleSearch()
+     let searchterm = getreg("g")
+     silent! exec "silent! !firefox \"http://google.com/search?q=" . searchterm . "\" &"
+endfunction
 " }}}
 
