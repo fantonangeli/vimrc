@@ -427,7 +427,7 @@ nnoremap <Leader>gd :ALEGoToDefinition<CR>
 " JsDoc
 nnoremap <Leader>jd :JsDoc<CR>
 " write param doc
-nnoremap <Leader>jp ^vEEEy/<C-r> yyVp<cr>
+nnoremap <Leader>jp 0f}wye/\* @param .* <C-r>"<cr>yyVp<cr>
 " search with google
 vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
 
