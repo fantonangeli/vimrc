@@ -120,6 +120,7 @@ Plug 'drmikehenry/vim-fontsize' "Adjust font size via keypresses
 Plug 'mbbill/undotree'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-abolish'
+Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
 
 " Plug 'ajh17/VimCompletesMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
