@@ -583,7 +583,7 @@ function! Lint()
     lopen
     map <C-j> :lnext<cr>
     map <C-k> :lprev<cr>
-    map <C-x> :lcl<cr>
+    nnoremap <Leader>x :lcl<Cr>
 endfunction
 
 " open quickfix with mappings
@@ -593,7 +593,7 @@ function! OpenQuickfix()
     :ex
     map <C-j> :cn<cr>
     map <C-k> :cp<cr>
-    map <C-x> :ccl<cr>
+    nnoremap <Leader>x :ccl<Cr>
 endfunction
 
 " search with google
