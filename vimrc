@@ -131,7 +131,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'tomtom/tcomment_vim'
 " Plug 'vim-syntastic/syntastic'
 Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
-" Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
+Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
 Plug 'Chiel92/vim-autoformat'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'metakirby5/codi.vim'
@@ -461,52 +461,52 @@ let g:spacegray_italicize_comments = 1
 " Lightline {{{
 
 " lightline with ALE
-" let g:lightline = {
-"       \ 'separator': { 'left': '', 'right': '' },
-"       \ 'subseparator': { 'left': '', 'right': '' },
-"       \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
-"       \ 'active': {
-"       \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
-"       \   'right': [ [ 'lineinfo' ],
-"       \              [ 'percent' ],
-"       \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
-"       \ },
-"       \ 'component_function': {
-"       \   'gitbranch': 'fugitive#head'
-"       \ },
-"       \ 'component_expand': {
-"       \  'buffers': 'lightline#bufferline#buffers',
-"       \  'linter_checking': 'lightline#ale#checking',
-"       \  'linter_infos': 'lightline#ale#infos',
-"       \  'linter_warnings': 'lightline#ale#warnings',
-"       \  'linter_errors': 'lightline#ale#errors',
-"       \  'linter_ok': 'lightline#ale#ok',
-"       \ },
-"       \ 'component_type': {
-"       \     'buffers': 'tabsel',
-"       \     'linter_checking': 'right',
-"       \     'linter_infos': 'right',
-"       \     'linter_warnings': 'warning',
-"       \     'linter_errors': 'error',
-"       \     'linter_ok': 'right',
-"       \ }
-"       \ }
-
-" lightline without ALE
 let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
       \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
+      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head'
       \ },
-      \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
-      \ 'component_type': {'buffers': 'tabsel'},
+      \ 'component_expand': {
+      \  'buffers': 'lightline#bufferline#buffers',
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ },
+      \ 'component_type': {
+      \     'buffers': 'tabsel',
+      \     'linter_checking': 'right',
+      \     'linter_infos': 'right',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'right',
       \ }
+      \ }
+
+" lightline without ALE
+" let g:lightline = {
+"       \ 'separator': { 'left': '', 'right': '' },
+"       \ 'subseparator': { 'left': '', 'right': '' },
+"       \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ],
+"       \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'gitbranch': 'fugitive#head'
+"       \ },
+"       \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
+"       \ 'component_type': {'buffers': 'tabsel'},
+"       \ }
 set showtabline=2
 " }}}
 
