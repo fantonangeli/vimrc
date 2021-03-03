@@ -588,9 +588,9 @@ endfunction
 
 " open quickfix with mappings
 function! OpenQuickfix()
-    :copen
-    :cc1
-    :ex
+    copen
+    cc1
+    ex
     map <C-j> :cn<cr>
     map <C-k> :cp<cr>
     nnoremap <Leader>x :ccl<Cr>
