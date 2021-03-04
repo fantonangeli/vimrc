@@ -579,7 +579,7 @@ endif
 " FUNCTION {{{
 " lint code and open location list with mappings
 function! Lint()
-    ALELint
+    " ALELint
     lopen
     map <C-j> :lnext<cr>
     map <C-k> :lprev<cr>
