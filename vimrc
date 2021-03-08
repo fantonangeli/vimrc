@@ -580,7 +580,7 @@ endif
 " lint code and open location list with mappings
 function! Lint()
     " ALELint
-    lopen
+    lopen 25
     map <C-j> :lnext<cr>
     map <C-k> :lprev<cr>
     nnoremap <Leader>x :lcl<Cr>
