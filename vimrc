@@ -356,6 +356,8 @@ command OverClass exe 'normal G"cpgg/classwyenwvepNNjva{Voggd'
 "Overwrite an angular component from "c changing the name to the current one 
 command OverComponent exe 'normal gg/@Component(f{ya"vya{:OverClass/@Component(f{va{"vp'
 
+"paste in a todo comment
+command PasteInTodo exe 'normal O/* TODO: pA */'
 
 "show environments diff
 command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
