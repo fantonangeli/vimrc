@@ -321,6 +321,7 @@ command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 command VGSEL :execute "VG ".@*     
 "search and list all TODOS and BUGS
 command TODOS VGFE 'TODO\|BUG '
+command TODOSBUFFERS call TodosBuffers()
 command FindThisFile VG %:t     "search this file in the project
 
 " Vimgrep commands
@@ -578,7 +579,8 @@ endif
 
 " }}}
 
-" FUNCTION {{{
+" FUNCTIONS {{{
+
 " lint code and open location list with mappings
 function! Lint()
     " ALELint
@@ -603,5 +605,13 @@ function! GoogleSearch()
      let searchterm = getreg("g")
      silent! exec "silent! !firefox \"http://google.com/search?q=" . searchterm . "\" &"
 endfunction
+
+" search TODOS in all open buffers
+function! TodosBuffers()
+    bufdo :args ## %
+    vimgrep TODO\|BUG ##
+    call OpenQuickfix()
+endfunction
+
 " }}}
 
