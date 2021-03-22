@@ -368,7 +368,9 @@ command GA :wa | :Git add . | :G
 command F :Flog
 command M :Merginal
 
-"MY KEYS---------------------------------------------------------- 
+" }}}
+
+"MY KEYS {{{
 
 "Switch between Vim window splits easily
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -396,11 +398,9 @@ inoremap <C-PageDown> <Esc>:bn<cr>
 
 "quickfix
 map <C-j> :cn<cr>
-map <C-k> :cp<cr>
+map <C-k> :cp<cr>"}}}
 
-
-
-"With leader-------------
+"MY LEADER KEYS{{{
 
 nnoremap <Leader>P :CtrlP<Cr>
 
@@ -441,9 +441,7 @@ vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
 " inoremap <Leader>s <Esc>:update<cr>
 
 "TComment
-noremap <Leader>c :TComment<CR>
-
-" }}}
+noremap <Leader>c :TComment<CR>"}}}
 
 " PLUGINS SETTINGS {{{
 
