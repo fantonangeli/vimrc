@@ -319,8 +319,8 @@ command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,bu
 command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 "find current selection in the project
 command VGSEL :execute "VG ".@*     
-"search and list all TODOS and BUGS
-command TODOS VGFE 'TODO\|BUG '
+"search and list all TODOS, BUGS, FIXME
+command TODOS VGFE 'TODO\|BUG\|FIXME '
 command TODOSBUFFERS call TodosBuffers()
 command FindThisFile VG %:t     "search this file in the project
 
@@ -607,7 +607,7 @@ endfunction
 " search TODOS in all open buffers
 function! TodosBuffers()
     bufdo :args ## %
-    vimgrep TODO\|BUG ##
+    vimgrep TODO\|BUG\|FIXME ##
     call OpenQuickfix()
 endfunction
 
