@@ -606,8 +606,10 @@ endfunction
 
 " search TODOS in all open buffers
 function! TodosBuffers()
-    bufdo :args ## %
-    vimgrep TODO\|BUG\|FIXME ##
+    " bufdo :args ## %
+    " vimgrep TODO\|BUG\|FIXME ##
+    cexpr []
+    bufdo vimgrepadd TODO\|BUG\|FIXME %
     call OpenQuickfix()
 endfunction
 
