@@ -409,7 +409,8 @@ nnoremap <Leader>f :CtrlPFunky<Cr>
 "select function
 nnoremap <Leader>vf va{V<Cr>
 "copy function
-nnoremap <Leader>yf va{Vy<Cr>
+" nnoremap <Leader>yf va{Vy<Cr>
+nnoremap <Leader>yf va{oj(jkkVy<Cr>
 "copy all 
 nnoremap <Leader>ya ggVGy'.<cr>
 "paste+indent
@@ -611,6 +612,12 @@ function! TodosBuffers()
     cexpr []
     bufdo vimgrepadd TODO\|BUG\|FIXME %
     call OpenQuickfix()
+endfunction
+
+" load per session configs
+function! LoadPerSessionConfig()
+    let sessionName=call xolox#session#find_current_session()
+    echo sessionName
 endfunction
 
 " }}}
