@@ -429,6 +429,8 @@ nnoremap <Leader>an :ALENext<CR>
 nnoremap <Leader>af :ALEFix<CR>
 " ALEGoToDefinition
 nnoremap <Leader>gd :ALEGoToDefinition<CR>
+" write param type
+nnoremap <Leader>pt yiw/<C-r>":\s\?\w\+veeeyvep<Cr>
 " JsDoc
 nnoremap <Leader>jd :JsDoc<CR>
 " write param doc
