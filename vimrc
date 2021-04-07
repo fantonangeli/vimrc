@@ -536,6 +536,7 @@ let g:jsdoc_enable_es6 = 1
 " ALE {{{
 let g:ale_fixers = ['prettier', 'eslint']
 let g:ale_set_highlights=0 "When this option is set to `1`, highlights will be set for problems.
+let g:ale_lint_on_enter = 0 "When this option is set to `1`, the |BufWinEnter| and |BufRead| events will be used to apply linters when buffers are first opened
 
 " use the quickfix list instead of the loclist
 " let g:ale_set_loclist = 0
