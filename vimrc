@@ -430,7 +430,7 @@ nnoremap <Leader>af :ALEFix<CR>
 " ALEGoToDefinition
 nnoremap <Leader>gd :ALEGoToDefinition<CR>
 " write param type
-nnoremap <Leader>pt yiw/<C-r>":\s\?\w\+veeeyvep<Cr>
+nnoremap <Leader>pt yiw/<C-r>":\s\?\w\+veeeyvep
 " JsDoc
 nnoremap <Leader>jd :JsDoc<CR>
 " write param doc
