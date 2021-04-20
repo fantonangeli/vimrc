@@ -410,7 +410,7 @@ nnoremap <Leader>f :CtrlPFunky<Cr>
 nnoremap <Leader>vf va{V<Cr>
 "copy function
 " nnoremap <Leader>yf va{Vy<Cr>
-nnoremap <Leader>yf va{oj(jkkVy<Cr>
+nnoremap <Leader>yf va{o?\/\*\*Vky<Cr>
 "copy all 
 nnoremap <Leader>ya ggVGy'.<cr>
 "paste+indent
