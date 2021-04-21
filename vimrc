@@ -423,6 +423,8 @@ nnoremap <Leader>pa ggVGp<cr>
 nnoremap <Leader>d :bd<CR>
 " Lint
 nnoremap <Leader>l :call Lint()<CR>
+" ALEHover
+nnoremap <Leader>ah :ALEHover<CR>
 " ALENext
 nnoremap <Leader>an :ALENext<CR>
 " ALEFix
