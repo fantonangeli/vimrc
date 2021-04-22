@@ -310,7 +310,6 @@ command Time :normal a<C-R>=strftime('%F %H:%M:%S')<CR>
 command Date :normal a<C-R>=strftime('%F')<CR>
 command PutTodoText :normal Vp$xxx^df:x0dw
 command JsExec :w !node
-command GPOG :Gpush origin | Gpush github
 
 " Grep commands
 "search in current project
