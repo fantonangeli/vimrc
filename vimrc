@@ -237,6 +237,7 @@ augroup END
 augroup typescript
     au!
     au BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript tabstop=2 shiftwidth=2 softtabstop=0 expandtab
+    let g:jsdoc_formatter = 'tsdoc'
 augroup END
 
 " }}}
@@ -321,7 +322,8 @@ command VGSEL :execute "VG ".@*
 "search and list all TODOS, BUGS, FIXME
 command TODOS VGFE 'TODO\|BUG\|FIXME '
 command TODOSBUFFERS call TodosBuffers()
-command FindThisFile VG %:t     "search this file in the project
+"search this file in the project
+command FindThisFile VG %:t
 
 " Vimgrep commands
 " command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts}
