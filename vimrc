@@ -34,7 +34,7 @@ set showcmd
 set nrformats-=octal
 
 "preserve my cursor position within a line when switching buffers
-autocmd BufEnter * silent! normal! g`"
+" autocmd BufEnter * silent! normal! g`"
 
 "Switch buffers in vim without saving to a currently modified file
 :set hidden
@@ -286,20 +286,20 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 " MY CMD {{{
 if has("win32")
     "Windows commands
-    command Vimrc e $HOME\.vim\vimrc\vimrc | setfiletype vim
-    command JsSnips e $HOME\.vim\snippets\javascript.snippets
-    command HtmlSnips e $HOME\.vim\snippets\html.snippets
-    command TsSnips e $HOME\.vim\snippets\typescript.snippets
+    command Vimrc tabnew $HOME\.vim\vimrc\vimrc | setfiletype vim
+    command JsSnips tabnew $HOME\.vim\snippets\javascript.snippets
+    command HtmlSnips tabnew $HOME\.vim\snippets\html.snippets
+    command TsSnips tabnew $HOME\.vim\snippets\typescript.snippets
 
     command Explorer !start explorer %:p:h:gs?\/?\\\\\\?
     command Cmd !start cmd
     command Cygwin !silent C:\cygwin64\bin\mintty.exe
 else
     "Linux commands
-    command Vimrc e $HOME/.vim/vimrc/vimrc | setfiletype vim
-    command JsSnips e $HOME/.vim/snippets/javascript.snippets
-    command HtmlSnips e $HOME/.vim/snippets/html.snippets
-    command TsSnips e $HOME/.vim/snippets/typescript.snippets
+    command Vimrc tabnew $HOME/.vim/vimrc/vimrc | setfiletype vim
+    command JsSnips tabnew $HOME/.vim/snippets/javascript.snippets
+    command HtmlSnips tabnew $HOME/.vim/snippets/html.snippets
+    command TsSnips tabnew $HOME/.vim/snippets/typescript.snippets
 
     command Dolphin silent !dolphin "%:p:h" &
     command Xterm silent !xterm &
@@ -362,7 +362,7 @@ command OverComponent exe 'normal gg/@Component(f{ya"vya{:OverClass/@Componen
 command PasteInTodo exe 'normal O/* TODO: pA */'
 
 "show environments diff
-command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
+" command EnvDiff tabnew src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
 
 "Git stage everyting and open Gstatus
 command GA :wa | :Git add . | :G
@@ -391,11 +391,15 @@ noremap <c-down> ddp
 " map <C-d> :bd<CR>
 " noremap <C-c> :TComment<CR>
 
+"Switching tabs 
+inoremap <C-PageUp> <Esc>:tabnext<cr>
+inoremap <C-PageDown> <Esc>:tabprevious<cr>
+
 "Switching buffers 
-nnoremap <C-PageUp> :bp<cr>
-inoremap <C-PageUp> <Esc>:bp<cr>
-nnoremap <C-PageDown> :bn<cr>
-inoremap <C-PageDown> <Esc>:bn<cr>
+" nnoremap <C-PageUp> :bp<cr>
+" inoremap <C-PageUp> <Esc>:bp<cr>
+" nnoremap <C-PageDown> :bn<cr>
+" inoremap <C-PageDown> <Esc>:bn<cr>
 
 "quickfix
 map <C-j> :cn<cr>
@@ -431,7 +435,7 @@ nnoremap <Leader>an :ALENext<CR>
 " ALEFix
 nnoremap <Leader>af :ALEFix<CR>
 " ALEGoToDefinition
-nnoremap <Leader>gd :ALEGoToDefinition<CR>
+nnoremap <Leader>gd :ALEGoToDefinition -tab<CR>
 " write param type
 nnoremap <Leader>pt yiw/<C-r>":\s\?\w\+veeeyvep
 " JsDoc
@@ -471,7 +475,6 @@ let g:spacegray_italicize_comments = 1
 let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
-      \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
       \   'right': [ [ 'lineinfo' ],
@@ -525,6 +528,11 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 
 " CtrlP config {{{
 let g:ctrlp_cmd = 'CtrlPCurWD'
+" Open with new tab for ctrlp.vim
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<2-LeftMouse>'],
+    \ 'AcceptSelection("t")': ['<cr>'],
+    \ }
 " }}} 
 
 " vim-snipmate config {{{
@@ -595,6 +603,7 @@ endfunction
 
 " open quickfix with mappings
 function! OpenQuickfix()
+    tabnew
     copen
     cc1
     ex
