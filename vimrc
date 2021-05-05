@@ -409,6 +409,8 @@ nnoremap <Leader>P :CtrlP<Cr>
 nnoremap <Leader>f :CtrlPFunky<Cr>
 "select function
 nnoremap <Leader>vf va{V<Cr>
+"select function with jsdoc
+nnoremap <Leader>vjf va{o?\/\*\*Vk<Cr>
 "copy function
 " nnoremap <Leader>yf va{Vy<Cr>
 nnoremap <Leader>yf va{o?\/\*\*Vky<Cr>
