@@ -543,6 +543,10 @@ let g:ale_fixers = ['prettier', 'eslint']
 let g:ale_set_highlights=0 "When this option is set to `1`, highlights will be set for problems.
 let g:ale_lint_on_enter = 0 "When this option is set to `1`, the |BufWinEnter| and |BufRead| events will be used to apply linters when buffers are first opened
 
+" use eslint_d
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_javascript_eslint_executable = 'eslint_d'
+
 " use the quickfix list instead of the loclist
 " let g:ale_set_loclist = 0
 " let g:ale_set_quickfix = 1
@@ -588,7 +592,7 @@ endif
 
 " lint code and open location list with mappings
 function! Lint()
-    " ALELint
+    ALELint
     lopen 25
     map <C-j> :lnext<cr>
     map <C-k> :lprev<cr>
