@@ -303,6 +303,7 @@ else
 
     command Dolphin silent !dolphin "%:p:h" &
     command Xterm silent !xterm &
+    command Konsole silent !konsole &
     command Meld silent !meld . &
 endif
 
