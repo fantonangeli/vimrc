@@ -425,6 +425,10 @@ nnoremap <Leader>P P=`]<cr>
 nnoremap <Leader>pa ggVGp<cr>
 "close buffer
 nnoremap <Leader>d :bd<CR>
+" Git push
+nnoremap <Leader>gps :Git push<CR>
+" Git pull
+nnoremap <Leader>gpl :Git pull<CR>
 " Lint
 nnoremap <Leader>l :call Lint()<CR>
 " ALEHover
