@@ -315,7 +315,7 @@ command JsExec :w !node
 
 " Grep commands
 "search in current project
-command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude="*.prod.js*" --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" -E <args> | call OpenQuickfix()
+command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude="*.prod.js*" --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" --exclude="*.svg" -E <args> | call OpenQuickfix()
 "execute VG only on frontend files
 command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 "find current word in the project
