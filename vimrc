@@ -121,6 +121,7 @@ Plug 'mbbill/undotree'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-abolish'
 Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
+Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
 
 " Plug 'ajh17/VimCompletesMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -449,6 +450,12 @@ nnoremap <Leader>jd :JsDoc<CR>
 nnoremap <Leader>jp 0f}wye/\* @param .*} <C-r>" <cr>yyVp<cr>
 " search with google
 vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
+
+" vim-test
+nnoremap <Leader>tn :TestNearest<CR>
+nnoremap <Leader>tf :TestFile<CR>
+nnoremap <Leader>ts :TestSuite<CR>
+nnoremap <Leader>tl :TestLast<CR>
 
 
 "save current buffer
