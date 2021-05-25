@@ -80,6 +80,8 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+set timeoutlen=3000 "make vim leader key persist for longer
+
 let base16colorspace=256  " Access colors present in 256 colorspace
 
 if has("win32")
