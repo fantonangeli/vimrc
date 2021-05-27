@@ -365,6 +365,9 @@ command OverComponent exe 'normal gg/@Component(f{ya"vya{:OverClass/@Componen
 "paste in a todo comment
 command PasteInTodo exe 'normal O/* TODO: pA */'
 
+"Subvert "f to "t
+command AutoSubvert exe 'bufdo %Subvert/F/t/gc'
+
 "show environments diff
 command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
 
