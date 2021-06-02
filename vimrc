@@ -366,13 +366,13 @@ command OverComponent exe 'normal gg/@Component(f{ya"vya{:OverClass/@Componen
 command PasteInTodo exe 'normal O/* TODO: pA */'
 
 "Subvert "f to "t
-command AutoSubvert exe 'bufdo %Subvert/F/t/gc'
+command AutoSubvert exe '%Subvert/f/t/gc'
 
 "show environments diff
 command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
 
 "Git stage everyting and open Gstatus
-command GA :wa | :Git add . | :G
+command! GA :wa | Git add . | G
 command F :Flog
 command M :Merginal
 
@@ -457,10 +457,10 @@ nnoremap <Leader>jp 0f}wye/\* @param .*} <C-r>" <cr>yyVp<cr>
 vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
 
 " vim-test
-nnoremap <Leader>tn :TestNearest<CR>
-nnoremap <Leader>tf :TestFile<CR>
-nnoremap <Leader>ts :TestSuite<CR>
-nnoremap <Leader>tl :TestLast<CR>
+nnoremap <Leader>tn :w \| TestNearest<CR>
+nnoremap <Leader>tf :w \| TestFile<CR>
+nnoremap <Leader>ts :wa \| TestSuite<CR>
+nnoremap <Leader>tl :w \| TestLast<CR>
 
 
 "save current buffer
