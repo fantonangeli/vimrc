@@ -445,6 +445,8 @@ nnoremap <Leader>an :ALENext<CR>
 nnoremap <Leader>af :ALEFix<CR>
 " ALEToggle
 nnoremap <Leader>at :ALEToggle<CR>
+" ALEToggle twice
+nnoremap <Leader>a2t :ALEToggle \| ALEToggle<CR>
 " ALEGoToDefinition
 nnoremap <Leader>gd :ALEGoToDefinition<CR>
 " write param type
