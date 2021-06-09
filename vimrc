@@ -449,6 +449,8 @@ nnoremap <Leader>at :ALEToggle<CR>
 nnoremap <Leader>a2t :ALEToggle \| ALEToggle<CR>
 " ALEGoToDefinition
 nnoremap <Leader>gd :ALEGoToDefinition<CR>
+" ALEDetail
+nnoremap <Leader>ad :ALEDetail<CR>
 " write param type
 nnoremap <Leader>pt yiw/<C-r>":\s\?\w\+veeeyvep
 " JsDoc
