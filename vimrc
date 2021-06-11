@@ -375,6 +375,9 @@ command EnvDiff e src/environments/environment.ts | vert diffsplit src/environme
 command! GA :wa | Git add . | G
 command F :Flog
 command M :Merginal
+"Write a commit from a yanked todo
+command! CommitFromTODO exe 'normal VpV<ESC>:s/.*\(TODO\|FIXME\): \(.*\)\*\//\2/'
+
 
 " }}}
 
