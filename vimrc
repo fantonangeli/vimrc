@@ -372,7 +372,7 @@ command -range AutoSubvert exe '<line1>,<line2>:Subvert/'.getreg("f").'/'.getreg
 command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
 
 "Git stage everyting and open Gstatus
-command! GA :wa | Git add . | G
+command! GA :wa | sleep 1 | Git add . | G
 command! F :Git fetch | Flog
 command M :Merginal
 "Write a commit from a yanked todo
