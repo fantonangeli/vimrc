@@ -155,23 +155,8 @@ Plug 'mhinz/vim-signify' "Signify (or just Sy) uses the sign column to indicate 
 " Theme / Interface
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline' "provides bufferline functionality for the lightline
-" Plug 'sjl/badwolf'
-" Plug 'tomasr/molokai'
-" Plug 'morhetz/gruvbox'
-" Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-" Plug 'junegunn/limelight.vim'
-" Plug 'mkarmona/colorsbox'
-" Plug 'romainl/Apprentice'
-" Plug 'Lokaltog/vim-distinguished'
-" Plug 'chriskempson/base16-vim'
-" Plug 'w0ng/vim-hybrid'
-" Plug 'AlessandroYorba/Sierra'
-Plug 'daylerees/colour-schemes'
-" Plug 'effkay/argonaut.vim'
-" Plug 'ajh17/Spacegray.vim'
-" Plug 'atelierbram/Base2Tone-vim'
-Plug 'colepeters/spacemacs-theme.vim'
-" Plug 'altercation/vim-colors-solarized'
+" Plug 'daylerees/colour-schemes'
+" Plug 'colepeters/spacemacs-theme.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 
