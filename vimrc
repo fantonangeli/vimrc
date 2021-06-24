@@ -358,7 +358,8 @@ command EnvDiff e src/environments/environment.ts | vert diffsplit src/environme
 
 "Git stage everyting and open Gstatus
 command! GA :wa | sleep 1 | Git add . | G
-command! F :Git fetch | Flog -all
+command! -nargs=* F :Git fetch | Flog -all <args>
+command! FL :F -date=local
 command M :Merginal
 "Write a commit from a yanked todo
 command! CommitFromTODO exe 'normal VpV<ESC>:s/.*\(TODO\|FIXME\): \(.*\)\*\//\2/'
