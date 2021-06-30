@@ -348,6 +348,9 @@ command OverClass exe 'normal G"cpgg/classwyenwvepNNjva{Voggd'
 "Overwrite an angular component from "c changing the name to the current one 
 command OverComponent exe 'normal gg/@Component(f{ya"vya{:OverClass/@Component(f{va{"vp'
 
+"remove console.something()
+command RemoveConsoleSomething :%s/.*console\.\w\+(.*\n//gc
+
 "paste in a todo comment
 command PasteInTodo exe 'normal O/* TODO: pA */'
 
