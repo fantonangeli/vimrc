@@ -293,6 +293,7 @@ else
     command Xterm silent !xterm &
     command Konsole silent !konsole &
     command Meld silent !meld . &
+    command Gitg silent !gitg &
 endif
 
 command WriteRandomNum :r! echo $RANDOM
