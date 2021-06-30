@@ -327,7 +327,7 @@ command Tilde :normal a~
 command -nargs=1 TSF tabnew | setfiletype <args> 
 
 
-command U UndotreeToggle 
+" command U UndotreeToggle 
 command PU PlugUpdate 
 command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
@@ -421,6 +421,8 @@ nnoremap <Leader>P P=`]<cr>
 nnoremap <Leader>pa ggVGp<cr>
 "close buffer
 nnoremap <Leader>d :bd<CR>
+"undotree
+nnoremap <Leader>u :UndotreeToggle<CR>
 " Git push
 nnoremap <Leader>gps :Git push<CR>
 " Git pull
