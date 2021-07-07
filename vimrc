@@ -374,6 +374,9 @@ command! CommitFromTODO exe 'normal VpV<ESC>:s/.*\(TODO\|FIXME\): \(.*\)\*\//\2/
 
 "MY KEYS {{{
 
+"Use gx with firefox instead the default wget
+nmap gx :silent execute "!firefox " . shellescape("<cWORD>")<CR>
+
 "Switch between Vim window splits easily
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
