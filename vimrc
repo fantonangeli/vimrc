@@ -301,6 +301,7 @@ command Time :normal a<C-R>=strftime('%F %H:%M:%S')<CR>
 command Date :normal a<C-R>=strftime('%F')<CR>
 command PutTodoText :normal Vp$xxx^df:x0dw
 command JsExec :w !node
+command EditSessionConfig execute 'edit' xolox#session#name_to_path(xolox#session#find_current_session()."x")
 
 " Grep commands
 "search in current project
@@ -642,12 +643,6 @@ function! TodosBuffers()
     cexpr []
     bufdo vimgrepadd TODO\|BUG\|FIXME %
     call OpenQuickfix()
-endfunction
-
-" load per session configs
-function! LoadPerSessionConfig()
-    let sessionName=call xolox#session#find_current_session()
-    echo sessionName
 endfunction
 
 " }}}
