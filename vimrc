@@ -321,6 +321,8 @@ command FindThisFile VG %:t
 " command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts}
 " command -nargs=1 VG noautocmd vimgrep <args> | copen | cc1 | ex
 
+command! Difft windo diffthis
+command! Diffo windo diffoff
 
 command -nargs=1 SFT setfiletype <args>
 command ThisFunctions /this\.\w\+\s*=\s*function
