@@ -126,7 +126,7 @@ Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
 Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
 
 " Plug 'ajh17/VimCompletesMe'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kiteco/vim-plugin'
 
 " Generic Programming Support 
