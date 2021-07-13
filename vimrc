@@ -126,8 +126,7 @@ Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
 Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
 
 " Plug 'ajh17/VimCompletesMe'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'kiteco/vim-plugin'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Generic Programming Support 
 Plug 'honza/vim-snippets'
@@ -492,10 +491,6 @@ colorscheme solarized8_light
 " Spacegray  {{{
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
-" }}}
-
-" Kite {{{
-let g:kite_supported_languages = ['python', 'javascript']"
 " }}}
 
 " Lightline {{{
