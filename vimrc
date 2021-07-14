@@ -499,7 +499,7 @@ let g:spacegray_italicize_comments = 1
 let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
-      \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
+      \ 'tabline': {'left': [['buffers']], 'right': [['tabs']]},
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
       \   'right': [ [ 'lineinfo' ],
