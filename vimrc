@@ -309,7 +309,7 @@ command -nargs=1 VG grep -R --exclude-dir={bower_components,node_modules,dist,bu
 "execute VG only on frontend files
 command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 "find current word in the project
-command VGWord :normal ye:VG <c-r>"<cr>
+command VGWord :normal yiw:VG <c-r>"<cr>
 "search and list all TODOS, BUGS, FIXME
 command TODOS VGFE 'TODO\|BUG\|FIXME '
 command TODOSBUFFERS call TodosBuffers()
