@@ -115,7 +115,7 @@ Plug 'tomtom/tlib_vim' "required by vim-snipmate
 Plug 'garbas/vim-snipmate'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'tpope/vim-dispatch'
-" Plug 'rhysd/devdocs.vim'
+Plug 'rhysd/devdocs.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'drmikehenry/vim-fontsize' "Adjust font size via keypresses
@@ -462,6 +462,8 @@ nnoremap <Leader>jd :JsDoc<CR>
 nnoremap <Leader>jp 0f}wye/\* @param .*} <C-r>" <cr>yyVp<cr>
 " search with google
 vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
+" search with DevDocs
+vnoremap <Leader>sd "gy<Esc>:call DevDocsSearch()<CR>
 
 " vim-test
 nnoremap <Leader>tn :w \| TestNearest<CR>
@@ -612,6 +614,10 @@ endif
 
 " }}}
 
+" vim-merginal {{{
+let g:merginal_windowWidth=90
+" }}}
+
 " }}}
 
 " FUNCTIONS {{{
@@ -639,6 +645,12 @@ endfunction
 function! GoogleSearch()
      let searchterm = getreg("g")
      silent! exec "silent! !firefox \"http://google.com/search?q=" . searchterm . "\" &"
+endfunction
+
+" search with devdocs
+function! DevDocsSearch()
+     let searchterm = getreg("g")
+     silent! exec "DevDocs " . searchterm 
 endfunction
 
 " search TODOS in all open buffers
