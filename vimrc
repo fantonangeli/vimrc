@@ -219,6 +219,7 @@ augroup END
 augroup javascript
     au!
     au BufNewFile,BufRead *.gs,*.js setlocal filetype=javascript
+    let g:jsdoc_formatter = 'jsdoc'
 augroup END
 
 " typescript
