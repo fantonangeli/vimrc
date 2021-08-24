@@ -645,7 +645,7 @@ endfunction
 " search with google
 function! GoogleSearch()
      let searchterm = getreg("g")
-     silent! exec "silent! !firefox \"http://google.com/search?q=" . searchterm . "\" &"
+     silent! exec "silent! !firefox --new-window \"http://google.com/search?q=" . searchterm . "\" &"
 endfunction
 
 " search with devdocs
