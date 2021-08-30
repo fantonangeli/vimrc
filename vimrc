@@ -559,7 +559,8 @@ let g:ctrlp_cmd = 'CtrlPCurWD'
 " }}} 
 
 " vim-snipmate config {{{
-let g:snipMate = { 'snippet_version' : 1 } "parser versio" }}}
+let g:snipMate = { 'snippet_version' : 1 } "parser version 
+" }}}
 
 " jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
