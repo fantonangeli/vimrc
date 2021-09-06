@@ -137,7 +137,7 @@ Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
 Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
 Plug 'Chiel92/vim-autoformat'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'metakirby5/codi.vim'
+Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
 
 
 " Markdown / Writting
