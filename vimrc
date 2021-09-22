@@ -334,8 +334,7 @@ command Tilde :normal a~
 command -nargs=1 TSF tabnew | setfiletype <args> 
 
 
-" command U UndotreeToggle 
-command PU PlugUpdate 
+command UpdateAll PlugUpgrade | PlugUpdate | CocUpdate
 command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
 command CopyFileRelPath let @+=expand("%:.")
