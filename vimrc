@@ -161,7 +161,10 @@ Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 
 " Javascript
-Plug 'heavenshell/vim-jsdoc'
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
 " Plug 'ternjs/tern_for_vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'leafgarland/typescript-vim'
@@ -563,9 +566,11 @@ let g:snipMate = { 'snippet_version' : 1 } "parser version
 " }}}
 
 " jsdoc {{{
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description = 1
-let g:jsdoc_enable_es6 = 1
+" let g:jsdoc_allow_input_prompt = 1
+" let g:jsdoc_input_description = 1
+" let g:jsdoc_enable_es6 = 1
+" let g:jsdoc_return = 1
+let g:jsdoc_formatter = 'jsdoc'
 "}}}
 
 " ALE {{{
