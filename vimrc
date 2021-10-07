@@ -223,7 +223,7 @@ augroup END
 " json
 augroup json
     au!
-    au BufNewFile,BufRead *.json setlocal filetype=json
+    au BufNewFile,BufRead *.json,.eslintrc setlocal filetype=json
 augroup END
 
 " Javascript
