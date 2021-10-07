@@ -125,8 +125,16 @@ Plug 'tpope/vim-abolish'
 Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
 Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
 
-" Plug 'ajh17/VimCompletesMe'
+" Coc 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'} "Html language server extension for coc.nvim
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'} "neoclide/coc-json
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'} "Css language server extension for coc.nvim
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'} "Snippets solution for coc.nvim
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'} "Tsserver language server extension for coc.nvim
+Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'} "markdownlint extension for coc.nvim
+Plug 'neoclide/coc-tabnine', {'do': 'yarn install --frozen-lockfile'} "client for TabNine, the all-language autocompleter
+Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'} "Yaml language server extension for coc.nvim
 
 " Generic Programming Support 
 Plug 'honza/vim-snippets'
@@ -334,7 +342,7 @@ command Tilde :normal a~
 command -nargs=1 TSF tabnew | setfiletype <args> 
 
 
-command UpdateAll PlugUpgrade | PlugUpdate | CocUpdate
+command UpdateAll PlugUpgrade | PlugUpdate
 command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
 command CopyFileRelPath let @+=expand("%:.")
