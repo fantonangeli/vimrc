@@ -110,9 +110,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab' "allows you to use <Tab> for all your insert completion needs
 Plug 'schickling/vim-bufonly'
 " Plug 'wesQ3/vim-windowswap'
-Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
-Plug 'tomtom/tlib_vim' "required by vim-snipmate
-Plug 'garbas/vim-snipmate'
+" Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
+" Plug 'tomtom/tlib_vim' "required by vim-snipmate
+" Plug 'garbas/vim-snipmate'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'tpope/vim-dispatch'
 Plug 'rhysd/devdocs.vim'
@@ -561,7 +561,7 @@ let g:ctrlp_cmd = 'CtrlPCurWD'
 " }}} 
 
 " vim-snipmate config {{{
-let g:snipMate = { 'snippet_version' : 1 } "parser version 
+" let g:snipMate = { 'snippet_version' : 1 } "parser version 
 " }}}
 
 " jsdoc {{{
