@@ -304,6 +304,7 @@ else
     command Dolphin silent !dolphin "%:p:h" &
     command Xterm silent !xterm &
     command Konsole silent !konsole &
+    command Yakuake silent !yakuake &
     command Meld silent !meld . &
     command Gitg silent !gitg &
 endif
