@@ -105,60 +105,20 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Utility 
-" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'majutsushi/tagbar'
 Plug 'ervandew/supertab' "allows you to use <Tab> for all your insert completion needs
 Plug 'schickling/vim-bufonly'
 " Plug 'wesQ3/vim-windowswap'
 " Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
 " Plug 'tomtom/tlib_vim' "required by vim-snipmate
-" Plug 'garbas/vim-snipmate'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'tpope/vim-dispatch'
-Plug 'rhysd/devdocs.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'drmikehenry/vim-fontsize' "Adjust font size via keypresses
 Plug 'mbbill/undotree'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'tpope/vim-abolish'
 Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
-Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
-
-" Coc 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'} "Html language server extension for coc.nvim
-Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'} "neoclide/coc-json
-Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'} "Css language server extension for coc.nvim
-Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'} "Snippets solution for coc.nvim
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'} "Tsserver language server extension for coc.nvim
-Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'} "markdownlint extension for coc.nvim
-Plug 'neoclide/coc-tabnine', {'do': 'yarn install --frozen-lockfile'} "client for TabNine, the all-language autocompleter
-Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'} "Yaml language server extension for coc.nvim
-
-" Generic Programming Support 
-Plug 'honza/vim-snippets'
-Plug 'Townk/vim-autoclose'
-Plug 'tomtom/tcomment_vim'
-" Plug 'vim-syntastic/syntastic'
-Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
-Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
-Plug 'Chiel92/vim-autoformat'
-Plug 'maksimr/vim-jsbeautify'
-Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
-
-
-" Markdown / Writting
-
-" Git Support
-Plug 'tpope/vim-fugitive'
-Plug 'rbong/vim-flog' "lightweight and powerful git branch viewer that integrates with fugitive
-Plug 'idanarye/vim-merginal'
-Plug 'mhinz/vim-signify' "Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file that is managed by a version control system (VCS)
-
-" PHP Support
-"Plug 'phpvim/phpcd.vim'
-"Plug 'tobyS/pdv'
 
 " Theme / Interface
 Plug 'itchyny/lightline.vim'
@@ -168,26 +128,69 @@ Plug 'mengelbrecht/lightline-bufferline' "provides bufferline functionality for 
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 
-" Javascript
-Plug 'heavenshell/vim-jsdoc', {
-  \ 'for': ['javascript', 'javascript.jsx','typescript'],
-  \ 'do': 'make install'
-\}
-" Plug 'ternjs/tern_for_vim'
-Plug 'tacahiroy/ctrlp-funky'
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty' "The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file
-" Plug 'agarrharr/consolation-vim'
+" Develop profile
+if g:profile == "develop"
+    " Utility
+    Plug 'tpope/vim-abolish'
+    Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
+    Plug 'rhysd/devdocs.vim'
 
-"HTML
-" Plug 'Valloric/MatchTagAlways'  "too slow
+    " Coc 
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'} "Html language server extension for coc.nvim
+    Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'} "neoclide/coc-json
+    Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'} "Css language server extension for coc.nvim
+    Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'} "Snippets solution for coc.nvim
+    Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'} "Tsserver language server extension for coc.nvim
+    Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'} "markdownlint extension for coc.nvim
+    Plug 'neoclide/coc-tabnine', {'do': 'yarn install --frozen-lockfile'} "client for TabNine, the all-language autocompleter
+    Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'} "Yaml language server extension for coc.nvim
 
-"Typo3
-" Plug 'elmar-hinz/vim.typoscript'
+    " Generic Programming Support 
+    Plug 'honza/vim-snippets'
+    Plug 'Townk/vim-autoclose'
+    Plug 'tomtom/tcomment_vim'
+    " Plug 'vim-syntastic/syntastic'
+    Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
+    Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
+    Plug 'Chiel92/vim-autoformat'
+    Plug 'maksimr/vim-jsbeautify'
+    Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
 
-" JSON
-Plug 'vim-scripts/JSON.vim'
 
+    " Markdown / Writting
+
+    " Git Support
+    Plug 'tpope/vim-fugitive'
+    Plug 'rbong/vim-flog' "lightweight and powerful git branch viewer that integrates with fugitive
+    Plug 'idanarye/vim-merginal'
+    Plug 'mhinz/vim-signify' "Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file that is managed by a version control system (VCS)
+
+    " PHP Support
+    "Plug 'phpvim/phpcd.vim'
+    "Plug 'tobyS/pdv'
+
+    " Javascript
+    Plug 'heavenshell/vim-jsdoc', {
+                \ 'for': ['javascript', 'javascript.jsx','typescript'],
+                \ 'do': 'make install'
+                \}
+    " Plug 'ternjs/tern_for_vim'
+    Plug 'tacahiroy/ctrlp-funky'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'maxmellon/vim-jsx-pretty' "The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file
+    " Plug 'agarrharr/consolation-vim'
+
+    "HTML
+    " Plug 'Valloric/MatchTagAlways'  "too slow
+
+    "Typo3
+    " Plug 'elmar-hinz/vim.typoscript'
+
+    " JSON
+    Plug 'vim-scripts/JSON.vim'
+
+endif
 
 
 
