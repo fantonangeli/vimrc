@@ -154,7 +154,7 @@ if g:profile == "develop"
     Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
     Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
     Plug 'Chiel92/vim-autoformat'
-    Plug 'maksimr/vim-jsbeautify'
+    Plug 'maksimr/vim-jsbeautify' "This extension allows you to use jsbeautifier inside vim
     Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
 
 
@@ -617,7 +617,7 @@ let g:gutentags_ctags_exclude = ['bower_components', 'node_modules', 'build', 'd
 let g:ctrlp_extensions = ['tag']
 
 "ctrlp ignore node_modules
-let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|git\|dist\|backstop_data'
+let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|git\|build\|dist\|backstop_data'
 " }}}
 
 " vim-session {{{
