@@ -233,14 +233,14 @@ augroup END
 augroup javascript
     au!
     au BufNewFile,BufRead *.gs,*.js setlocal filetype=javascript
-    let g:jsdoc_formatter = 'jsdoc'
+    au BufNewFile,BufRead *.gs,*.js let g:jsdoc_formatter = 'jsdoc'
 augroup END
 
 " typescript
 augroup typescript
     au!
-    au BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript tabstop=2 shiftwidth=2 softtabstop=0 expandtab
-    let g:jsdoc_formatter = 'tsdoc'
+    au BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript tabstop=2 shiftwidth=2 softtabstop=0 expandtab 
+    au BufNewFile,BufRead *.ts,*.tsx let g:jsdoc_formatter = 'tsdoc'
 augroup END
 
 " }}}
@@ -581,7 +581,7 @@ let g:ctrlp_cmd = 'CtrlPCurWD'
 " let g:jsdoc_input_description = 1
 " let g:jsdoc_enable_es6 = 1
 " let g:jsdoc_return = 1
-let g:jsdoc_formatter = 'jsdoc'
+" let g:jsdoc_formatter = 'jsdoc'
 "}}}
 
 " ALE {{{
