@@ -566,6 +566,12 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " coc.nvim config {{{
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+let g:coc_user_config = {     
+    \'diagnostic.displayByAle': v:true,
+    \'snippets.extends': {
+        \'typescript': ['javascript']
+        \}
+\}
 " }}}
 
 " CtrlP config {{{
