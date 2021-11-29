@@ -205,6 +205,12 @@ augroup vimrc
     au BufNewFile,BufRead vimrc setlocal foldmethod=marker
 augroup END
 
+" BASH
+augroup bash
+    au!
+    au BufNewFile,BufRead *.sh setlocal filetype=bash
+augroup END
+
 " SCSS
 augroup scss
     au!
