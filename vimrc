@@ -128,6 +128,9 @@ Plug 'mengelbrecht/lightline-bufferline' "provides bufferline functionality for 
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 
+" Generic Programming Support 
+Plug 'tomtom/tcomment_vim'
+
 " Develop profile
 if g:profile == "develop"
     " Utility
@@ -149,8 +152,6 @@ if g:profile == "develop"
     " Generic Programming Support 
     Plug 'honza/vim-snippets'
     Plug 'Townk/vim-autoclose'
-    Plug 'tomtom/tcomment_vim'
-    " Plug 'vim-syntastic/syntastic'
     Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
     Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
     Plug 'Chiel92/vim-autoformat'
@@ -180,9 +181,6 @@ if g:profile == "develop"
     Plug 'leafgarland/typescript-vim'
     Plug 'maxmellon/vim-jsx-pretty' "The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file
     " Plug 'agarrharr/consolation-vim'
-
-    "HTML
-    " Plug 'Valloric/MatchTagAlways'  "too slow
 
     "Typo3
     " Plug 'elmar-hinz/vim.typoscript'
