@@ -310,6 +310,7 @@ else
 
     command Dolphin silent !dolphin "%:p:h" &
     command Xterm silent !xterm &
+    command Gterm silent !gnome-terminal --working-directory="%:p:h" &
     command Konsole silent !konsole &
     command Yakuake silent !yakuake &
     command Meld silent !meld . &
@@ -518,8 +519,6 @@ let g:spacegray_italicize_comments = 1
 
 " lightline with ALE
 let g:lightline = {
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' },
       \ 'tabline': {'left': [['buffers']], 'right': [['tabs']]},
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
@@ -627,7 +626,7 @@ let g:gutentags_ctags_exclude = ['bower_components', 'node_modules', 'build', 'd
 let g:ctrlp_extensions = ['tag']
 
 "ctrlp ignore node_modules
-let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|git\|build\|dist\|backstop_data'
+let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|build\|dist\|backstop_data'
 " }}}
 
 " vim-session {{{
