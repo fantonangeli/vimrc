@@ -309,6 +309,7 @@ else
     command TsSnips e $HOME/.vim/snippets/typescript.snippets
 
     command Dolphin silent !dolphin "%:p:h" &
+    command Nautilus silent !nautilus "%:p:h" &
     command Xterm silent !xterm &
     command Gterm silent !gnome-terminal --working-directory="%:p:h" &
     command Konsole silent !konsole &
