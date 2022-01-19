@@ -72,6 +72,9 @@ let g:elite_mode=1
 " Enable highlighting of the current line
 set cursorline
 
+" Automatically change the current directory
+set autochdir
+
 " Theme and Styling 
 set t_Co=256
 set background=dark
