@@ -73,7 +73,7 @@ let g:elite_mode=1
 set cursorline
 
 " Automatically change the current directory
-set autochdir
+" set autochdir
 
 " Theme and Styling 
 set t_Co=256
@@ -464,6 +464,8 @@ nnoremap <Leader>gpl :Git pull<CR>
 nnoremap <Leader>l :call Lint()<CR>
 " ALEHover
 nnoremap <Leader>ah :ALEHover<CR>
+" ALEPrev
+nnoremap <Leader>ap :ALEPrevious<CR>
 " ALENext
 nnoremap <Leader>an :ALENext<CR>
 " ALEFix
