@@ -246,8 +246,15 @@ augroup END
 " typescript
 augroup typescript
     au!
-    au BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript tabstop=2 shiftwidth=2 softtabstop=0 expandtab 
-    au BufNewFile,BufRead *.ts,*.tsx let g:jsdoc_formatter = 'tsdoc'
+    au BufNewFile,BufRead *.ts setlocal filetype=typescript tabstop=2 shiftwidth=2 softtabstop=0 expandtab 
+    au BufNewFile,BufRead *.ts let g:jsdoc_formatter = 'tsdoc'
+augroup END
+
+" typescript tsx
+augroup typescripttsx
+    au!
+    au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx tabstop=2 shiftwidth=2 softtabstop=0 expandtab 
+    au BufNewFile,BufRead *.tsx let g:jsdoc_formatter = 'tsdoc'
 augroup END
 
 " }}}
