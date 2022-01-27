@@ -26,7 +26,7 @@ set incsearch "Incremental search
 set foldmethod=indent
 set foldlevel=20
 
-"set visualbell	" Use visual bell (no beeping)
+set visualbell	" Use visual bell (no beeping)
 
 set showcmd
 
