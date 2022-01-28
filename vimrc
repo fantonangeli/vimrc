@@ -154,6 +154,7 @@ if g:profile == "develop"
 
     " Generic Programming Support 
     Plug 'honza/vim-snippets'
+    Plug 'mlaursen/vim-react-snippets'
     Plug 'Townk/vim-autoclose'
     Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
     Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
