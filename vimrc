@@ -344,7 +344,7 @@ command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 "find current word in the project
 command VGWord :normal yiw:VG <c-r>"<cr>
 "search and list all TODOS, BUGS, FIXME
-command TODOS VGFE 'TODO\|BUG\|FIXME '
+command TODOS VGFE 'TODO\|BUG\|FIXME'
 command TODOSBUFFERS call TodosBuffers()
 "search this file in the project
 command FindThisFile VG %:t
