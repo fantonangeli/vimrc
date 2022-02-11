@@ -494,6 +494,8 @@ nnoremap <Leader>pt yiw/<C-r>":\s\?\w\+veeeyvep
 nnoremap <Leader>jd :JsDoc<CR>
 " write param doc
 nnoremap <Leader>jp 0f}wye/\* @param .*} <C-r>" <cr>yyVp<cr>
+" write param doc for typescript
+nnoremap <Leader>tp 0f@Wye/@param + yyVp<cr>
 " search with google
 vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
 " search with DevDocs
