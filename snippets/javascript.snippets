@@ -1,0 +1,304 @@
+snippet cv "console.log of var"
+	console.log('${1}', $1);
+
+snippet cj "console.log stringify of var"
+	console.log('${1}', JSON.stringify($1));
+
+snippet ifret "if->returns" 
+	if (${1}) {
+		return ${2};
+	}
+
+snippet threxif "if err throw" 
+	if (!${1:var}) {
+		throw "$1 is not valid!";
+	}
+
+snippet fixme "fixme text"
+	/* FIXME: ${1:`vim_snippets#Filename()`} ${2} */
+
+snippet todo "todo text"
+	/* TODO: ${1:`vim_snippets#Filename()`:} ${2} */
+
+snippet unskipme "unskipme"
+	/* TODO: ${1:`vim_snippets#Filename()`:} unskip me */
+
+snippet uncommentme "uncommentme"
+	/* TODO: ${1:`vim_snippets#Filename()`:} uncomment me */
+
+snippet removeme "removeme"
+	/* TODO: ${1:`vim_snippets#Filename()`:} remove me */
+
+snippet array2hash "Converts object array to hashtable"
+	${1:arr}.reduce(function(map, obj) {
+		map[obj.key] = obj.val;
+		return map;
+	}, {});
+
+snippet stringify "JSON.stringify"
+	JSON.stringify(${1});
+
+snippet arrayinit "initialize an array with values"
+	Array(${1}).fill(${2})
+
+#------------------------------------------Jsdoc------------------------------------------
+snippet jdvar
+	/**
+	 * ${0:description}
+	 * @type {${1:type}}
+	 */
+
+snippet retvoid "return void jsdoc"
+	* @returns {void}
+
+#------------------------------------------ES6------------------------------------------
+snippet import "import"
+	import ${2} from '${1}';
+
+#------------------------------------------ESLINT------------------------------------------
+snippet eslintdisablenextline "eslint-disable-next-line"
+	// eslint-disable-next-line ${1} 
+
+#------------------------------------------JEST------------------------------------------
+snippet exp "Jest - expect(value)"
+	expect($1)$2;
+
+
+snippet ebe "Jest - expect(value).toBe(value)"
+	expect($1).toBe($2);
+
+
+snippet ecall "Jest - expect(mockFn).toHaveBeenCalled()"
+	expect($1).toHaveBeenCalled();
+
+
+snippet ecallt "Jest - expect(mockFn).toHaveBeenCalledTimes(number)"
+	expect($1).toHaveBeenCalledTimes($2);
+
+
+snippet ecallw "Jest - expect(mockFn).toHaveBeenCalledWith(arg1, arg2, ...)"
+	expect($1).toHaveBeenCalledWith($2);
+
+
+snippet ecloseto "Jest - expect(number).toBeCloseTo(number, numDigits)"
+	expect($1).toBeCloseTo($2, $3);
+
+
+snippet edef "Jest - expect(value).toBeDefined()"
+	expect($1).toBeDefined();
+
+
+snippet efalsy "Jest - expect(value).toBeFalsy()"
+	expect($1).toBeFalsy();
+
+
+snippet egreater "Jest - expect(number).toBeGreaterThan(number)"
+	expect($1).toBeGreaterThan($2);
+
+
+snippet egreateror "Jest - expect(number).toBeGreaterThanOrEqual(number)"
+	expect($1).toBeGreaterThanOrEqual($2);
+
+
+snippet eless "Jest - expect(number).toBeLessThan(number)"
+	expect($1).toBeLessThan($2);
+
+
+snippet elessor "Jest - expect(number).toBeLessThanOrEqual(number)"
+	expect($1).toBeLessThanOrEqual($2);
+
+
+snippet einst "Jest - expect(obj).toBeInstanceOf(Class)"
+	expect($1).toBeInstanceOf($2);
+
+
+snippet enull "Jest - expect(value).toBeNull()"
+	expect($1).toBeNull();
+
+
+snippet etruthy "Jest - expect(value).toBeTruthy()"
+	expect($1).toBeTruthy();
+
+
+snippet eundef "Jest - expect(value).toBeUndefined()"
+	expect($1).toBeUndefined();
+
+
+snippet econ "Jest - expect(list).toContain(value)"
+	expect($1).toContain($2);
+
+
+snippet econeq "Jest - expect(list).toContainEqual(value)"
+	expect($1).toContainEqual($2);
+
+
+snippet eeq "Jest - expect(value).toEqual(value)"
+	expect($1).toEqual($2);
+
+
+snippet eleng "Jest - expect(list).toHaveLength(number)"
+	expect($1).toHaveLength($2);
+
+
+snippet emat "Jest - expect(string).toMatch(regexpOrString)"
+	expect($1).toMatch($2);
+
+
+snippet ematob "Jest - expect(obj).toMatchObject(obj)"
+	expect($1).toMatchObject($2);
+
+
+snippet ematsnap "Jest - expect(value).toMatchSnapshot(optionalString)"
+	expect($1).toMatchSnapshot($2);
+
+
+snippet ethrow "Jest - expect(func).toThrow(error)"
+	expect($1).toThrow($2);
+
+
+snippet jsetup "Jest - Sets up jest test file"
+	import $1 from './$1';
+	describe('$1', () => {
+		test('$2', () => {
+			$3
+		});
+	});
+
+
+snippet desc "Jest - describe(name, fn)"
+	describe('$1', () => {
+		${VISUAL}$0
+	});
+
+
+snippet test "Jest - test(name, fn)"
+	test('$1', () => {
+		$2
+	});
+
+
+snippet it "Jest - alias for test()"
+	it('$1', () => {
+		$2
+	});
+
+
+snippet aftera "Jest - afterAll(fn)"
+	afterAll(() => {
+		$1
+	});
+
+
+snippet aftere "Jest - afterEach(fn)"
+	afterEach(() => {
+		$1
+	});
+
+
+snippet beforea "Jest - beforeAll(fn)"
+	beforeAll(() => {
+		$1
+	});
+
+
+snippet beforee "Jest - beforeEach(fn)"
+	beforeEach(() => {
+		$1
+	});
+
+
+## MOCK
+
+snippet mclear "Jest - .mockClear()"
+	.mockClear();
+
+
+snippet mreset "Jest - .mockReset()"
+	.mockReset();
+
+
+snippet mimpl "Jest - .mockImplementation(fn)"
+	.mockImplementation($1);
+
+
+snippet mimplonce "Jest - .mockImplementationOnce(fn)"
+	.mockImplementationOnce($1);
+
+
+snippet mrett "Jest - .mockReturnThis()"
+	.mockReturnThis();
+
+
+snippet mretval "Jest - .mockReturnValue(value)"
+	.mockReturnValue($1);
+
+
+snippet mretvalo "Jest - .mockReturnValueOnce(value)"
+	.mockReturnValueOnce($1);
+
+
+## JEST
+
+snippet jcleartimers "Jest - jest.clearAllTimers()"
+	jest.clearAllTimers();
+
+
+snippet jdisableautomock "Jest - jest.disableAutomock()"
+	jest.disableAutomock();
+
+
+snippet jenableautomock "Jest - jest.enableAutomock()"
+	jest.enableAutomock();
+
+
+snippet jfn "Jest - jest.fn()"
+	jest.fn($1);
+
+
+snippet jismock "Jest - jest.isMockFunction(fn)"
+	jest.isMockFunction($1);
+
+
+snippet jgenmock "Jest - jest.genMockFromModule(moduleName)"
+	jest.genMockFromModule($1);
+
+
+snippet jmock "Jest - jest.mock(moduleName, factory, options)"
+	jest.mock($1);
+
+
+snippet jresetallmocks "Jest - jest.resetAllMocks()"
+	jest.resetAllMocks();
+
+
+snippet jresetmodules "Jest - jest.resetModules()"
+	jest.resetModules();
+
+
+snippet jrunticks "Jest - jest.runAllTicks()"
+	jest.runAllTicks();
+
+
+snippet jruntimers "Jest - jest.runAllTimers()"
+	jest.runAllTimers();
+
+
+snippet jrunpendtimers "Jest - jest.runOnlyPendingTimers()"
+	jest.runOnlyPendingTimers();
+
+
+snippet jsetmock "Jest - jest.setMock(moduleName, moduleExports)"
+	jest.setMock($1);
+
+
+snippet junmock "Jest - jest.unmock(moduleName)"
+	jest.unmock($1);
+
+
+snippet jfaketimers "Jest - jest.useFakeTimers()"
+	jest.useFakeTimers($1);
+
+
+snippet jrealtimers "Jest - jest.useRealTimers()"
+	jest.useRealTimers($1);
+

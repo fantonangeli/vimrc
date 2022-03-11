@@ -1,0 +1,22 @@
+extends javascript
+
+snippet clts "console.log of vars with destruction"
+	console.log({${1}});
+
+snippet getset "put getter and setter for a var"
+	private _${1:varname}: ${2:type};
+	
+	public get $1(){
+		return this._$1;
+	}
+
+	public set $1($1: $2){
+		this._$1=$1;
+	}
+endsnippet
+
+snippet forts "for typescript (...) {...}"
+	for (let ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1 += 1) {
+		${0:${VISUAL}}
+	}
+endsnippet
