@@ -333,7 +333,7 @@ command WriteRandomNum :r! echo $RANDOM
 command Time :normal a<C-R>=strftime('%F %H:%M:%S')<CR>
 command Date :normal a<C-R>=strftime('%F')<CR>
 command PutTodoText :normal Vp$xxx^df:x0dw
-command PutCRComment :normal iFixes comment: p:x<CR>
+command PutPRComment :normal iFixes comment: p:x<CR>
 command JsExec :w !node
 command EditSessionConfig execute 'edit' xolox#session#name_to_path(xolox#session#find_current_session()."x")
 
