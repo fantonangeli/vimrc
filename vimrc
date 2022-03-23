@@ -396,7 +396,9 @@ command -range AutoSubvert exe '<line1>,<line2>:Subvert/'.getreg("f").'/'.getreg
 "show environments diff
 command EnvDiff e src/environments/environment.ts | vert diffsplit src/environments/environment.prod.ts
 
-"Git stage everyting and open Gstatus
+"Git 
+command! G :cclose | Git
+"Git stage everyting and open G
 command! GA :wa | sleep 1 | Git add . | G
 command! -nargs=* F :Git fetch | Flog -all <args>
 command! FL :F -date=local
