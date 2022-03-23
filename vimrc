@@ -540,7 +540,7 @@ let g:spacegray_italicize_comments = 1
 let g:lightline = {
       \ 'tabline': {'left': [['buffers']], 'right': [['tabs']]},
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified'] ],
+      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'modified'] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ]
