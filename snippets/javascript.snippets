@@ -15,19 +15,16 @@ snippet threxif "if err throw"
 	}
 
 snippet fixme "fixme text"
-	/* FIXME: ${1} */
+	/* FIXME: ${1:`vim_snippets#Filename()`} ${2} */
 
 snippet todo "todo text"
-	/* TODO: ${1} */
-
-snippet todoWithFilename "todo with filename - this is a backup" 
 	/* TODO: ${1:`vim_snippets#Filename()`:} ${2} */
 
 snippet unskipme "unskipme"
-	/* TODO: ${1} unskip me */
+	/* TODO: ${1:`vim_snippets#Filename()`:} unskip me */
 
 snippet uncommentme "uncommentme"
-	/* TODO: ${1} uncomment me */
+	/* TODO: ${1:`vim_snippets#Filename()`:} uncomment me */
 
 snippet removeme "removeme"
 	/* TODO: ${1:`vim_snippets#Filename()`:} remove me */
