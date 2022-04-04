@@ -369,7 +369,7 @@ command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
 command CopyFileRelPath let @+=expand("%:.")
 command CopyFileFullPath let @+=expand("%:p")
-" command -nargs=1 OS OpenSession <args> | Cmd
+command! SetWorkingDirectory :cd %:p:h
 
 "MY JsBeautify CMD
 command JsBeautify call JsBeautify()
