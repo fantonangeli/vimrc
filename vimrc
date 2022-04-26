@@ -401,7 +401,7 @@ command EnvDiff e src/environments/environment.ts | vert diffsplit src/environme
 command! G :cclose | Git
 "Git stage everyting and open G
 command! GA :wa | sleep 1 | Git add . | G
-command! -nargs=* F :Git fetch | Flog -all <args>
+command! -nargs=* F :Git fetch --all | Flog -all <args>
 command! FL :F -date=local
 command M :Merginal
 "Write a commit from a yanked todo
