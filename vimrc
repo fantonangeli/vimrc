@@ -5,8 +5,6 @@ syntax on
 "set nowrap
 set wrap linebreak nolist
 set encoding=utf8
-" set guifont=DroidSansMono_NF:h10:cANSI:qDRAFT
-set guifont=FuraMono_NF:h10:cANSI:qDRAFT
 set ffs=unix,dos
 
 "Language
