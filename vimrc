@@ -640,6 +640,7 @@ set omnifunc=ale#completion#OmniFunc
 set tags=./.tags,.tags
 let g:gutentags_ctags_tagfile=".tags"
 let g:gutentags_ctags_exclude = ['bower_components', 'node_modules', 'build', 'dist']
+let g:gutentags_project_root = ['package.json']
 " }}}
 
 " CtrlP {{{
