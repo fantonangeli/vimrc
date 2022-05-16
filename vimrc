@@ -149,6 +149,7 @@ if g:profile == "develop"
     Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'} "markdownlint extension for coc.nvim
     Plug 'neoclide/coc-tabnine', {'do': 'yarn install --frozen-lockfile'} "client for TabNine, the all-language autocompleter
     Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'} "Yaml language server extension for coc.nvim
+    Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'} "Java language server extension for coc.nvim
 
     " Generic Programming Support 
     Plug 'honza/vim-snippets'
@@ -399,7 +400,7 @@ command EnvDiff e src/environments/environment.ts | vert diffsplit src/environme
 command! G :cclose | Git
 "Git stage everyting and open G
 command! GA :wa | sleep 1 | Git add . | G
-command! -nargs=* F :Git fetch origin | Git fetch upstream | Flog -all <args>
+command! -nargs=* F :Git fetch origin | Git fetch upstream | Flog -all -date=local <args>
 command! FL :F -date=local
 command M :Merginal
 "Write a commit from a yanked todo
@@ -545,7 +546,7 @@ let g:lightline = {
       \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
+      \   'gitbranch': 'FugitiveHead'
       \ },
       \ 'component_expand': {
       \  'buffers': 'lightline#bufferline#buffers',
