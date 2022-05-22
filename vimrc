@@ -13,7 +13,7 @@ language en_US
 set undofile
 set undodir=~/.vim/undo
 
-set wildignore+=*.o,*.obj,*.bak,*.exe,*.svg,*.jpg,*.jpeg,*.png,*.gif,*.tiff,*.woff,*.eof,*.woff2,*.ttf,*.doc,*.docx,*.pdf,node_modules/**,bower_components/**,.*/**,yarn.lock,package-lock.json,build/**,dist/**,backstop_data/**
+set wildignore+=*.o,*.obj,*.bak,*.exe,*.svg,*.jpg,*.jpeg,*.png,*.gif,*.tiff,*.woff,*.eof,*.woff2,*.ttf,*.doc,*.docx,*.pdf,node_modules/**,bower_components/**,.*/**,yarn.lock,package-lock.json,build/**,dist/**,backstop_data/**,*/target/*
 
 "highlight all occurrence of a selected word
 set hlsearch
@@ -338,7 +338,7 @@ command EditSessionConfig execute 'edit' xolox#session#name_to_path(xolox#sessio
 
 " Grep commands
 "search in current project
-command! -nargs=1 VG grep -IR --exclude-dir={bower_components,node_modules,dist,build,backstop_data,.}* --exclude="*.prod.js*" --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" --exclude="*.svg" --exclude="*-bundle.js" --exclude="*-bundle.js" --exclude="*.js.map" -E <args> | call OpenQuickfix()
+command! -nargs=1 VG grep -IR --exclude-dir={bower_components,node_modules,dist,build,backstop_data,target,.}* --exclude="*.prod.js*" --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" --exclude="*.svg" --exclude="*-bundle.js" --exclude="*-bundle.js" --exclude="*.js.map" -E <args> | call OpenQuickfix()
 "execute VG only on frontend files
 command! -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 "find current word in the project
@@ -646,7 +646,7 @@ let g:gutentags_project_root = ['package.json']
 let g:ctrlp_extensions = ['tag']
 
 "ctrlp ignore node_modules
-let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|build\|dist\|backstop_data'
+let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|build\|dist\|backstop_data\|target'
 " }}}
 
 " vim-session {{{
