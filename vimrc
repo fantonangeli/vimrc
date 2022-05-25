@@ -160,6 +160,7 @@ if g:profile == "develop"
     Plug 'Chiel92/vim-autoformat'
     Plug 'maksimr/vim-jsbeautify' "This extension allows you to use jsbeautifier inside vim
     Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
+    Plug 'quick-lint/quick-lint-js', {'rtp': 'plugin/vim/quick-lint-js.vim', 'tag': '2.5.0'} "quick-lint-js plugin to replace eslint
 
 
     " Markdown / Writting
@@ -617,9 +618,17 @@ let g:ale_fixers = {'javascript': ['prettier', 'eslint'],'java':['uncrustify']}
 let g:ale_set_highlights=0 "When this option is set to `1`, highlights will be set for problems.
 let g:ale_lint_on_enter = 0 "When this option is set to `1`, the |BufWinEnter| and |BufRead| events will be used to apply linters when buffers are first opened
 
-" use eslint_d
 let g:ale_javascript_eslint_use_global = 1
-let g:ale_javascript_eslint_executable = 'eslint_d'
+" let g:ale_javascript_eslint_executable = 'eslint_d'
+" let g:ale_javascript_eslint_executable = 'eslint'
+let g:ale_javascript_eslint_executable = 'quick-lint-js'
+
+" quick-lint-js ALE tuning
+let g:ale_lint_delay = 0
+let g:ale_lint_on_text_changed = 'always'
+if exists('#ALEEvents')
+    call ale#events#Init()
+endif
 
 " use the quickfix list instead of the loclist
 " let g:ale_set_loclist = 0
