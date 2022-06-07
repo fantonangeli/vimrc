@@ -542,13 +542,14 @@ let g:spacegray_italicize_comments = 1
 let g:lightline = {
       \ 'tabline': {'left': [['buffers']], 'right': [['tabs']]},
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'modified'] ],
+      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'modified', 'session_name'] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'FugitiveHead',
+      \   'session_name': 'xolox#session#find_current_session'
       \ },
       \ 'component_expand': {
       \  'buffers': 'lightline#bufferline#buffers',
