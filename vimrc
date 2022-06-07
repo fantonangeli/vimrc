@@ -170,6 +170,7 @@ if g:profile == "develop"
     Plug 'rbong/vim-flog' "lightweight and powerful git branch viewer that integrates with fugitive
     Plug 'idanarye/vim-merginal'
     Plug 'mhinz/vim-signify' "Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file that is managed by a version control system (VCS)
+    Plug 'ruanyl/vim-gh-line'
 
     " PHP Support
     "Plug 'phpvim/phpcd.vim'
