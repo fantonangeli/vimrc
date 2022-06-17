@@ -4,6 +4,13 @@ snippet cv "console.log of var"
 snippet cj "console.log stringify of var"
 	console.log('${1}', JSON.stringify($1));
 
+snippet cifret "const if->returns" 
+	const ${1} = ${2};
+
+	if (!${1}) {
+		return${3};
+	}
+
 snippet ifret "if->returns" 
 	if (${1}) {
 		return${2};
