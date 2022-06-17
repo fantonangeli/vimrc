@@ -166,7 +166,8 @@ if g:profile == "develop"
     " Markdown / Writting
 
     " Git Support
-    Plug 'tpope/vim-fugitive' "A Git wrapper
+    " Plug 'tpope/vim-fugitive' "A Git wrapper
+    Plug 'tpope/vim-fugitive', { 'commit': '92c73bb0507338441733198d630a1fe5e7fdac3a' } "use this commit until this is fixed https://github.com/idanarye/vim-merginal/issues/52
     Plug 'rbong/vim-flog' "lightweight and powerful git branch viewer that integrates with fugitive
     Plug 'idanarye/vim-merginal' "nice interface for dealing with Git branches
     Plug 'mhinz/vim-signify' "Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file that is managed by a version control system (VCS)
