@@ -373,6 +373,7 @@ command SpellOff set nospell<CR>
 command CopyFileRelPath let @+=expand("%:.")
 command CopyFileFullPath let @+=expand("%:p")
 command! SetWorkingDirectory :cd %:p:h
+command! LexploreHere :Lexplore %:p:h
 
 "MY JsBeautify CMD
 command JsBeautify call JsBeautify()
