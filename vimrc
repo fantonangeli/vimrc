@@ -372,6 +372,7 @@ command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
 command CopyFileRelPath let @+=expand("%:.")
 command CopyFileFullPath let @+=expand("%:p")
+command! CopySessionName let @+=xolox#session#find_current_session()
 command! SetWorkingDirectory :cd %:p:h
 command! LexploreHere :Lexplore %:p:h
 
