@@ -9,7 +9,7 @@ set guioptions-=r  "remove menu bar"
 set guioptions-=e  "required from bufferline
 
 "enable xterm with colors 
-set guioptions+=!
+" set guioptions+=!
 
 set guioptions-=l  "hide left sidebar, try to fix cursor disappear
 
