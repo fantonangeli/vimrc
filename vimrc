@@ -349,7 +349,7 @@ command VGWord :normal yiw:VG <c-r>"<cr>
 "search and list all TODOS, BUGS, FIXME
 command TODOS VGFE 'TODO\|BUG\|FIXME'
 command TODOSBUFFERS call TodosBuffers()
-command! PRFindDirtyLines VGFE 'TODO\|BUG\|FIXME\|console\.\|debugger;'
+command! PRFindDirtyLines VGFE 'TODO\|BUG\|FIXME\|console\.log\|debugger;'
 "search this file in the project
 command FindThisFile VG %:t
 
