@@ -160,7 +160,7 @@ if g:profile == "develop"
     Plug 'Chiel92/vim-autoformat'
     Plug 'maksimr/vim-jsbeautify' "This extension allows you to use jsbeautifier inside vim
     Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
-    Plug 'quick-lint/quick-lint-js', {'rtp': 'plugin/vim/quick-lint-js.vim', 'tag': '2.5.0'} "quick-lint-js plugin to replace eslint
+    Plug 'quick-lint/quick-lint-js', {'rtp': 'plugin/vim/quick-lint-js.vim' } "quick-lint-js plugin to replace eslint
 
 
     " Markdown / Writting
