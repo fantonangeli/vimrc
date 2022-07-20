@@ -604,6 +604,7 @@ let g:coc_user_config = {
 
 " CtrlP config {{{
 let g:ctrlp_cmd = 'CtrlPCurWD'
+let g:ctrlp_follow_symlinks = 1
 " }}} 
 
 " vim-snipmate config {{{
