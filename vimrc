@@ -2,6 +2,7 @@
 
 set nocompatible
 syntax on
+syntax sync minlines=10000 " fixes syntax highlighting breaks for big file after jump or search
 "set nowrap
 set wrap linebreak nolist
 set encoding=utf8
@@ -658,7 +659,7 @@ function! ShowDocumentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 " nmap <leader>rn <Plug>(coc-rename)
