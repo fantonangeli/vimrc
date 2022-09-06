@@ -345,6 +345,7 @@ command EditSessionConfig execute 'edit' xolox#session#name_to_path(xolox#sessio
 command! -nargs=1 VG grep -IR --exclude-dir={bower_components,node_modules,dist,build,backstop_data,target,.}* --exclude="*.prod.js*" --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" --exclude="*.svg" --exclude="*-bundle.js" --exclude="*-bundle.js" --exclude="*.js.map" -E <args> | call OpenQuickfix()
 "execute VG only on frontend files
 command! -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
+command! -nargs=1 VGTS VG <args> --include=*.{ts,tsx}
 "find current word in the project
 command VGWord :normal yiw:VG <c-r>"<cr>
 "search and list all TODOS, BUGS, FIXME
