@@ -48,6 +48,9 @@ snippet stringify "JSON.stringify"
 snippet arrayinit "initialize an array with values"
 	Array(${1}).fill(${2})
 
+snippet setTimeoutAwait "setTimeout await" 
+    await new Promise(resolve => setTimeout(resolve, 10000000));
+
 #------------------------------------------Jsdoc------------------------------------------
 snippet jdvar
 	/**
