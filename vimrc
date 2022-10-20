@@ -376,6 +376,7 @@ command SpellOff set nospell<CR>
 command CopyFileRelPath let @+=expand("%:.")
 command CopyFileFullPath let @+=expand("%:p")
 command! CopySessionName let @+=xolox#session#find_current_session()
+command! CopyBranchName call CopyBranchName()
 command! SetWorkingDirectory :cd %:p:h
 command! LexploreHere :Lexplore %:p:h
 
@@ -812,6 +813,11 @@ function! TodosBuffers()
     cexpr []
     bufdo vimgrepadd TODO\|BUG\|FIXME %
     call OpenQuickfix()
+endfunction
+
+" copy branch name
+function! CopyBranchName()
+    execute ':let @+="' . FugitiveHead() . '"'
 endfunction
 
 " }}}
