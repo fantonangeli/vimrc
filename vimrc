@@ -185,7 +185,7 @@ if g:profile == "develop"
                 \}
     " Plug 'ternjs/tern_for_vim'
     Plug 'tacahiroy/ctrlp-funky'
-    Plug 'leafgarland/typescript-vim'
+    Plug 'leafgarland/typescript-vim' "Syntax file and other settings for TypeScript
     Plug 'maxmellon/vim-jsx-pretty' "The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file
     " Plug 'agarrharr/consolation-vim'
 
