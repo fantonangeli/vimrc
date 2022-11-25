@@ -107,41 +107,41 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Utility 
-" Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar' "Vim plugin that displays tags in a window, ordered by scope 
 " Plug 'ervandew/supertab' "allows you to use <Tab> for all your insert completion needs
-Plug 'schickling/vim-bufonly'
-" Plug 'wesQ3/vim-windowswap'
+Plug 'schickling/vim-bufonly' "Delete all the buffers except the current buffer.
+" Plug 'wesQ3/vim-windowswap' "Swap your windows without ruining your layout 
 " Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
 " Plug 'tomtom/tlib_vim' "required by vim-snipmate
-Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'tpope/vim-dispatch'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+Plug 'ctrlpvim/ctrlp.vim' "Full path fuzzy file, buffer, mru, tag, ... finder for Vim
+" Plug 'tpope/vim-dispatch' "dispatch.vim: Asynchronous build and test dispatcher
+Plug 'xolox/vim-misc' "Miscellaneous auto-load Vim scripts
+Plug 'xolox/vim-session' "Extended session management
 Plug 'drmikehenry/vim-fontsize' "Adjust font size via keypresses
-Plug 'mbbill/undotree'
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'mbbill/undotree' "The undo history visualizer for VIM
+Plug 'ludovicchabant/vim-gutentags' "A Vim plugin that manages your tag files 
 Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
 
 " Theme / Interface
-Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim' "A light and configurable statusline/tabline plugin
 Plug 'mengelbrecht/lightline-bufferline' "provides bufferline functionality for the lightline
-" Plug 'daylerees/colour-schemes'
-" Plug 'colepeters/spacemacs-theme.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'xolox/vim-colorscheme-switcher'
+" Plug 'daylerees/colour-schemes' "Colour schemes for a variety of editors
+" Plug 'colepeters/spacemacs-theme.vim' "Spacemacs-flavoured colorscheme for Vim and iTerm 
+Plug 'flazz/vim-colorschemes' "one colorscheme pack to rule them all! 
+Plug 'xolox/vim-colorscheme-switcher' "Makes it easy to quickly switch between color schemes
 
 " Generic Programming Support 
-Plug 'tomtom/tcomment_vim'
+Plug 'tomtom/tcomment_vim' "An extensible & universal comment vim-plugin that also handles embedded filetypes
 
 " Develop profile
 if g:profile == "develop"
     " Utility
-    Plug 'tpope/vim-abolish'
+    Plug 'tpope/vim-abolish' "easily search for, substitute, and abbreviate multiple variants of a word
     Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
-    Plug 'rhysd/devdocs.vim'
+    Plug 'rhysd/devdocs.vim' "This is a Vim plugin for devdocs
 
     " Coc 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} "Custom popup menu with snippet support
     Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'} "Html language server extension for coc.nvim
     Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'} "neoclide/coc-json
     Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'} "Css language server extension for coc.nvim
@@ -153,11 +153,11 @@ if g:profile == "develop"
     Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'} "Java language server extension for coc.nvim
 
     " Generic Programming Support 
-    Plug 'honza/vim-snippets'
-    Plug 'mlaursen/vim-react-snippets'
+    Plug 'honza/vim-snippets' "snippets files for various programming languages
+    Plug 'mlaursen/vim-react-snippets' "A collection of common Javascript and Typescript vim snippets for developing React applications
     Plug 'dense-analysis/ale' "Check syntax in Vim asynchronously
     Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
-    Plug 'Chiel92/vim-autoformat'
+    Plug 'Chiel92/vim-autoformat' "Format code with one button press (or automatically on save)
     Plug 'maksimr/vim-jsbeautify' "This extension allows you to use jsbeautifier inside vim
     Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
     Plug 'quick-lint/quick-lint-js', {'rtp': 'plugin/vim/quick-lint-js.vim' } "quick-lint-js plugin to replace eslint
@@ -167,7 +167,7 @@ if g:profile == "develop"
 
     " Git Support
     " Plug 'tpope/vim-fugitive' "A Git wrapper
-    Plug 'tpope/vim-fugitive' 
+    Plug 'tpope/vim-fugitive'  "A Git wrapper so awesome, it should be illegal 
     Plug 'rbong/vim-flog' "lightweight and powerful git branch viewer that integrates with fugitive
     Plug 'idanarye/vim-merginal' "nice interface for dealing with Git branches
     Plug 'mhinz/vim-signify' "Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file that is managed by a version control system (VCS)
@@ -175,24 +175,24 @@ if g:profile == "develop"
 
     " PHP Support
     "Plug 'phpvim/phpcd.vim'
-    "Plug 'tobyS/pdv'
+    "Plug 'tobyS/pdv' "PHP Documentor for VIM - Generates PHP docblocks 
 
     " Javascript
     Plug 'heavenshell/vim-jsdoc', {
                 \ 'for': ['javascript', 'javascript.jsx','typescript'],
                 \ 'do': 'make install'
-                \}
-    " Plug 'ternjs/tern_for_vim'
-    Plug 'tacahiroy/ctrlp-funky'
+                \} "Generate JSDoc to your JavaScript code. 
+    " Plug 'ternjs/tern_for_vim' "Tern plugin for Vim
+    Plug 'tacahiroy/ctrlp-funky' "A super simple function navigator for ctrlp.vim 
     Plug 'leafgarland/typescript-vim' "Syntax file and other settings for TypeScript
     Plug 'maxmellon/vim-jsx-pretty' "The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file
-    " Plug 'agarrharr/consolation-vim'
+    " Plug 'agarrharr/consolation-vim' "A vim plugin for JavaScript to console.log out whatever you have in the register. 
 
     "Typo3
-    " Plug 'elmar-hinz/vim.typoscript'
+    " Plug 'elmar-hinz/vim.typoscript' "Syntax highlighting for the unbeatable vim text editor
 
     " JSON
-    Plug 'vim-scripts/JSON.vim'
+    Plug 'vim-scripts/JSON.vim' "A syntax highlighting file for JSON
 
 endif
 
