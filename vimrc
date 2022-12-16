@@ -161,6 +161,7 @@ if g:profile == "develop"
     Plug 'maksimr/vim-jsbeautify' "This extension allows you to use jsbeautifier inside vim
     Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
     Plug 'quick-lint/quick-lint-js', {'rtp': 'plugin/vim/quick-lint-js.vim' } "quick-lint-js plugin to replace eslint
+    Plug 'jiangmiao/auto-pairs' "Insert or delete brackets, parens, quotes in pair.
 
 
     " Markdown / Writting
