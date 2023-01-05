@@ -692,6 +692,7 @@ nmap <leader>cl  <Plug>(coc-codelens-action)
 " CtrlP config {{{
 let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_by_filename = 1 
 " }}} 
 
 " vim-snipmate config {{{
@@ -710,6 +711,7 @@ let g:ctrlp_follow_symlinks = 1
 let g:ale_fixers = {'javascript': ['prettier', 'eslint'],'java':['uncrustify']}
 let g:ale_set_highlights=0 "When this option is set to `1`, highlights will be set for problems.
 let g:ale_lint_on_enter = 0 "When this option is set to `1`, the |BufWinEnter| and |BufRead| events will be used to apply linters when buffers are first opened
+let g:ale_virtualtext_cursor = 'disabled' "controls how ALE will display problems
 
 let g:ale_javascript_eslint_use_global = 1
 " let g:ale_javascript_eslint_executable = 'eslint_d'
