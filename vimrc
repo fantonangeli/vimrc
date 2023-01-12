@@ -758,10 +758,7 @@ let g:session_autosave = 'yes'
 let g:session_command_aliases = 1
 let g:session_default_to_last= 1
 let g:session_autoload = 'no'
-
-if has("unix")
-    autocmd SessionLoadPost * silent !master-notify.sh & 
-endif
+set sessionoptions-=buffers " Don't save hidden and unloaded buffers in sessions.
 
 " }}}
 
