@@ -261,6 +261,12 @@ augroup typescripttsx
     au BufNewFile,BufRead *.tsx let g:jsdoc_formatter = 'tsdoc'
 augroup END
 
+" noundo
+augroup noundo txt
+    au!
+    au BufNewFile,BufRead *.noundo.txt setlocal noundofile
+augroup END
+
 " }}}
 
 " MAPPINGS CONFIGURATIONN {{{
