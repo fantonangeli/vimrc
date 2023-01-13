@@ -137,6 +137,7 @@ Plug 'tomtom/tcomment_vim' "An extensible & universal comment vim-plugin that al
 if g:profile == "develop"
     " Utility
     Plug 'tpope/vim-abolish' "easily search for, substitute, and abbreviate multiple variants of a word
+    Plug 'nicwest/vim-camelsnek' "Convert between camel and snek case
     Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
     Plug 'rhysd/devdocs.vim' "This is a Vim plugin for devdocs
 
