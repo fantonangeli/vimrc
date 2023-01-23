@@ -170,7 +170,7 @@ if g:profile == "develop"
     " Git Support
     " Plug 'tpope/vim-fugitive' "A Git wrapper
     Plug 'tpope/vim-fugitive'  "A Git wrapper so awesome, it should be illegal 
-    Plug 'rbong/vim-flog' "lightweight and powerful git branch viewer that integrates with fugitive
+    Plug 'rbong/vim-flog', { 'branch': 'v1' } "lightweight and powerful git branch viewer that integrates with fugitive
     Plug 'idanarye/vim-merginal' "nice interface for dealing with Git branches
     Plug 'mhinz/vim-signify' "Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file that is managed by a version control system (VCS)
     Plug 'ruanyl/vim-gh-line' "opens a link to the current line on GitHub 
