@@ -129,6 +129,7 @@ Plug 'mengelbrecht/lightline-bufferline' "provides bufferline functionality for 
 " Plug 'colepeters/spacemacs-theme.vim' "Spacemacs-flavoured colorscheme for Vim and iTerm 
 Plug 'flazz/vim-colorschemes' "one colorscheme pack to rule them all! 
 Plug 'xolox/vim-colorscheme-switcher' "Makes it easy to quickly switch between color schemes
+Plug 'sainnhe/everforest' "Comfortable & Pleasant Color Scheme for Vim 
 
 " Generic Programming Support 
 Plug 'tomtom/tcomment_vim' "An extensible & universal comment vim-plugin that also handles embedded filetypes
@@ -540,8 +541,14 @@ noremap <Leader>c :TComment<CR>"}}}
     "
 " colorscheme holokai
 " colorscheme spacegray
-colorscheme solarized8_light
+" colorscheme solarized8_light
 " colorscheme spacemacs-theme
+
+" Everforest
+set background=light
+let g:everforest_background = 'soft'
+let g:everforest_better_performance = 1
+colorscheme everforest
 
 " }}}
 
