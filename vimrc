@@ -381,8 +381,10 @@ command -nargs=1 TSF tabnew | setfiletype <args>
 command UpdateAll PlugUpgrade | PlugUpdate
 command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
-command CopyFileRelPath let @+=expand("%:.")
-command CopyFileFullPath let @+=expand("%:p")
+command! CopyFileRelPath let @+=expand("%:.") "Copy the relative path of the current file
+command! CopyFileFullPath let @+=expand("%:p") "Copy the full path of the current file
+command! CopyFileCoordinates let @+=expand("%:.").":".line(".") "Copy the relative path of the current file and the line number
+command! CopyFileFullPathCoordinates let @+=expand("%:p").":".line(".")  "Copy the full path of the current file and the line number
 command! CopySessionName let @+=xolox#session#find_current_session()
 command! CopyBranchName call CopyBranchName()
 command! SetWorkingDirectory :cd %:p:h
