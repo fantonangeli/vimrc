@@ -114,6 +114,7 @@ Plug 'schickling/vim-bufonly' "Delete all the buffers except the current buffer.
 " Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
 " Plug 'tomtom/tlib_vim' "required by vim-snipmate
 Plug 'ctrlpvim/ctrlp.vim' "Full path fuzzy file, buffer, mru, tag, ... finder for Vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "A command-line fuzzy finder
 " Plug 'tpope/vim-dispatch' "dispatch.vim: Asynchronous build and test dispatcher
 Plug 'xolox/vim-misc' "Miscellaneous auto-load Vim scripts
 Plug 'xolox/vim-session' "Extended session management
