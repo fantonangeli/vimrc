@@ -131,6 +131,7 @@ Plug 'mengelbrecht/lightline-bufferline' "provides bufferline functionality for 
 Plug 'flazz/vim-colorschemes' "one colorscheme pack to rule them all! 
 Plug 'xolox/vim-colorscheme-switcher' "Makes it easy to quickly switch between color schemes
 Plug 'sainnhe/everforest' "Comfortable & Pleasant Color Scheme for Vim 
+Plug 'lifepillar/vim-solarized8' "Solarized colorschemes
 
 " Generic Programming Support 
 Plug 'tomtom/tcomment_vim' "An extensible & universal comment vim-plugin that also handles embedded filetypes
@@ -170,7 +171,6 @@ if g:profile == "develop"
     " Markdown / Writting
 
     " Git Support
-    " Plug 'tpope/vim-fugitive' "A Git wrapper
     Plug 'tpope/vim-fugitive'  "A Git wrapper so awesome, it should be illegal 
     Plug 'rbong/vim-flog', { 'branch': 'v1' } "lightweight and powerful git branch viewer that integrates with fugitive
     Plug 'idanarye/vim-merginal' "nice interface for dealing with Git branches
