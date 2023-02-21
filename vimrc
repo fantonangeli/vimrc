@@ -524,6 +524,8 @@ nnoremap <Leader>tp 0f@Wye/@param + yyVp<cr>
 vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
 " search with DevDocs
 vnoremap <Leader>sd "gy<Esc>:call DevDocsSearch()<CR>
+" FZF current project
+nnoremap <c-l> :execute 'GFiles '.getcwd()<CR>
 
 " vim-test
 nnoremap <Leader>tn :w \| TestNearest<CR>
