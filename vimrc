@@ -490,7 +490,7 @@ nnoremap <Leader>u :UndotreeToggle<CR>
 " Git push
 nnoremap <Leader>gps :Git push<CR>
 " Git pull
-nnoremap <Leader>gpl :Git pull<CR>
+nnoremap <Leader>gpl :Git pull \| Flog<CR>
 " Merginal
 nnoremap <Leader>m :Merginal<CR>
 " Lint
