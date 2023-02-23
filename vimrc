@@ -423,7 +423,6 @@ command! G :cclose | Git
 command! GA :wa | sleep 1 | Git add . | G
 command! -nargs=* F :Git fetch origin | Git fetch upstream | Flog -all -date=local <args>
 command! FL :F -date=local
-command M :Merginal
 "Write a commit from a yanked todo
 command! CommitFromTODO exe 'normal VpV<ESC>:s/.*\(TODO\|FIXME\): \(.*\)\*\//\2/'
 
@@ -492,6 +491,8 @@ nnoremap <Leader>u :UndotreeToggle<CR>
 nnoremap <Leader>gps :Git push<CR>
 " Git pull
 nnoremap <Leader>gpl :Git pull<CR>
+" Merginal
+nnoremap <Leader>m :Merginal<CR>
 " Lint
 nnoremap <Leader>l :call Lint()<CR>
 " ALEHover
