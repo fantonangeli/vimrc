@@ -389,6 +389,7 @@ command! CopyFileCoordinates let @+=expand("%:.").":".line(".") "Copy the relati
 command! CopyFileFullPathCoordinates let @+=expand("%:p").":".line(".")  "Copy the full path of the current file and the line number
 command! CopySessionName let @+=xolox#session#find_current_session()
 command! CopyBranchName call CopyBranchName()
+command! -range GDiffSince execute "!git difftool -d " . @*
 command! SetWorkingDirectory :cd %:p:h
 command! LexploreHere :Lexplore %:p:h
 
