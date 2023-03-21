@@ -430,7 +430,7 @@ command! CommitFromTODO exe 'normal VpV<ESC>:s/.*\(TODO\|FIXME\): \(.*\)\*\//\2/
 
 " }}}
 
-"MY KEYS {{{
+"MY MAPPINGS {{{
 
 "Use gx with firefox instead the default wget
 nmap gx :silent execute "!firefox " . shellescape("<cWORD>")<CR>
@@ -461,7 +461,12 @@ inoremap <C-PageDown> <Esc>:bn<cr>
 
 "quickfix
 map <C-j> :cn<cr>
-map <C-k> :cp<cr>"}}}
+map <C-k> :cp<cr>
+
+" FZF current project
+nnoremap <c-l> :execute 'GFiles '.getcwd()<CR>
+
+"}}}
 
 "MY LEADER KEYS{{{
 
@@ -526,8 +531,8 @@ nnoremap <Leader>tp 0f@Wye/@param + yyVp<cr>
 vnoremap <Leader>sg "gy<Esc>:call GoogleSearch()<CR>
 " search with DevDocs
 vnoremap <Leader>sd "gy<Esc>:call DevDocsSearch()<CR>
-" FZF current project
-nnoremap <c-l> :execute 'GFiles '.getcwd()<CR>
+" Run bash command in terminal
+vnoremap <Leader>tb :terminal bash<CR>
 
 " vim-test
 nnoremap <Leader>tn :w \| TestNearest<CR>
@@ -541,7 +546,8 @@ nnoremap <Leader>tl :w \| TestLast<CR>
 " inoremap <Leader>s <Esc>:update<cr>
 
 "TComment
-noremap <Leader>c :TComment<CR>"}}}
+noremap <Leader>c :TComment<CR>
+"}}}
 
 " PLUGINS SETTINGS {{{
 
