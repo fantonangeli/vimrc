@@ -385,8 +385,8 @@ command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
 command! CopyFileRelPath let @+=expand("%:.") "Copy the relative path of the current file
 command! CopyFileFullPath let @+=expand("%:p") "Copy the full path of the current file
-command! CopyFileCoordinates let @+=expand("%:.").":".line(".") "Copy the relative path of the current file and the line number
-command! CopyFileFullPathCoordinates let @+=expand("%:p").":".line(".")  "Copy the full path of the current file and the line number
+command! CopyFileCoordinates let @+=expand("%:.").":".line(".").":".col(".") "Copy the relative path of the current file and the line number
+command! CopyFileFullPathCoordinates let @+=expand("%:p").":".line(".").":".col(".")  "Copy the full path of the current file and the line number
 command! CopySessionName let @+=xolox#session#find_current_session()
 command! CopyBranchName call CopyBranchName()
 command! -range GDiffSince execute "!git difftool -d " . @*
