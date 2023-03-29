@@ -511,14 +511,10 @@ nnoremap <Leader>an :ALENext<CR>
 nnoremap <Leader>af :ALEFix<CR>
 " ALEToggle
 nnoremap <Leader>at :ALEToggle<CR>
-" ALEToggle twice
-nnoremap <Leader>a2t :ALEToggle \| ALEToggle<CR>
 " ALEGoToDefinition
 nnoremap <Leader>gd :ALEGoToDefinition<CR>
 " ALEDetail
 nnoremap <Leader>ad :ALEDetail<CR>
-" ALEOrganizeImports
-nnoremap <Leader>ao :ALEOrganizeImports \| sleep 1 \| ALEFix<CR>
 " write param type
 nnoremap <Leader>pt yiw/<C-r>":\s\?\w\+veeeyvep
 " JsDoc
