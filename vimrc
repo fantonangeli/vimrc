@@ -155,7 +155,7 @@ if g:profile == "develop"
     Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'} "markdownlint extension for coc.nvim
     Plug 'neoclide/coc-tabnine', {'do': 'yarn install --frozen-lockfile'} "client for TabNine, the all-language autocompleter
     Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'} "Yaml language server extension for coc.nvim
-    Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'} "Java language server extension for coc.nvim
+    " Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'} "Java language server extension for coc.nvim
 
     " Generic Programming Support 
     Plug 'honza/vim-snippets' "snippets files for various programming languages
