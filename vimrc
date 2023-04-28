@@ -422,7 +422,7 @@ command EnvDiff e src/environments/environment.ts | vert diffsplit src/environme
 command! G :cclose | Git
 "Git stage everyting and open G
 command! GA :wa | sleep 1 | Git add . | G
-command! -nargs=* F :Git fetch origin | Git fetch upstream | Flog -all -date=local <args>
+command! -nargs=* F :Git fetch origin -p | Git fetch upstream -p | Flog -all -date=local <args>
 command! FL :F -date=local
 "Write a commit from a yanked todo
 command! CommitFromTODO exe 'normal VpV<ESC>:s/.*\(TODO\|FIXME\): \(.*\)\*\//\2/'
