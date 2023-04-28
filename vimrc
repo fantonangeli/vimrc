@@ -465,6 +465,7 @@ map <C-k> :cp<cr>
 
 " FZF current project
 nnoremap <c-l> :execute 'GFiles '.getcwd()<CR>
+nnoremap <c-ò> :call fzf#run(fzf#wrap({'source': 'git ls-files'}))<CR>
 
 "}}}
 
