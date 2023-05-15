@@ -279,16 +279,19 @@ augroup END
 " noremap <C-m> :CtrlPFunky<CR>
 
 
+" FZF current project
+" nnoremap <c-l> :execute 'GFiles '.getcwd()<CR>
+nnoremap <c-l> :call fzf#run(fzf#wrap({'source': 'git ls-files'}))<CR>
+
 " Mapping selecting Mappings
-"nmap <leader><tab> <plug>(fzf-maps-n)
-"xmap <leader><tab> <plug>(fzf-maps-x)
-"omap <leader><tab> <plug>(fzf-maps-o)
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
-"imap <c-x><c-k> <plug>(fzf-complete-word)
-"imap <c-x><c-f> <plug>(fzf-complete-path)
-"imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-"imap <c-x><c-l> <plug>(fzf-complete-line)
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Vim-Test Mappings
 " nmap <silent> <leader>t :TestNearest<CR>
@@ -462,10 +465,6 @@ inoremap <C-PageDown> <Esc>:bn<cr>
 "quickfix
 map <C-j> :cn<cr>
 map <C-k> :cp<cr>
-
-" FZF current project
-nnoremap <c-l> :execute 'GFiles '.getcwd()<CR>
-nnoremap <c-ò> :call fzf#run(fzf#wrap({'source': 'git ls-files'}))<CR>
 
 "}}}
 
