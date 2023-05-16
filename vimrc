@@ -576,7 +576,7 @@ let g:lightline = {
       \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'modified', 'session_name'] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ]
+      \              [ 'fileformat', 'fileencoding', 'filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
@@ -586,6 +586,7 @@ let g:lightline = {
       \  'buffers': 'lightline#bufferline#buffers',
       \  'linter_checking': 'lightline#ale#checking',
       \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_infos': 'lightline#ale#infos',
       \  'linter_errors': 'lightline#ale#errors',
       \  'linter_ok': 'lightline#ale#ok',
       \ },
@@ -593,6 +594,7 @@ let g:lightline = {
       \     'buffers': 'tabsel',
       \     'linter_checking': 'right',
       \     'linter_warnings': 'warning',
+      \     'linter_infos': 'right',
       \     'linter_errors': 'error',
       \     'linter_ok': 'right',
       \ }
