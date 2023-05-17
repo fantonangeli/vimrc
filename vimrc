@@ -165,7 +165,6 @@ if g:profile == "develop"
     Plug 'Chiel92/vim-autoformat' "Format code with one button press (or automatically on save)
     Plug 'maksimr/vim-jsbeautify' "This extension allows you to use jsbeautifier inside vim
     Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
-    Plug 'quick-lint/quick-lint-js', {'rtp': 'plugin/vim/quick-lint-js.vim' } "quick-lint-js plugin to replace eslint
     Plug 'jiangmiao/auto-pairs' "Insert or delete brackets, parens, quotes in pair.
 
 
@@ -740,16 +739,8 @@ let g:ale_lint_on_enter = 0 "When this option is set to `1`, the |BufWinEnter| a
 let g:ale_virtualtext_cursor = 'disabled' "controls how ALE will display problems
 
 let g:ale_javascript_eslint_use_global = 1
-" let g:ale_javascript_eslint_executable = 'eslint_d'
+let g:ale_javascript_eslint_executable = 'eslint_d'
 " let g:ale_javascript_eslint_executable = 'eslint'
-let g:ale_javascript_eslint_executable = 'quick-lint-js'
-
-" quick-lint-js ALE tuning
-let g:ale_lint_delay = 0
-let g:ale_lint_on_text_changed = 'always'
-if exists('#ALEEvents')
-    call ale#events#Init()
-endif
 
 " use the quickfix list instead of the loclist
 " let g:ale_set_loclist = 0
