@@ -734,7 +734,7 @@ let g:ctrlp_by_filename = 1
 "}}}
 
 " ALE {{{
-let g:ale_fixers = {'javascript': ['prettier', 'eslint'],'java':['uncrustify']}
+let g:ale_fixers = {'javascript': ['prettier', 'eslint'],'typescript': ['prettier', 'eslint'],'java':['uncrustify']}
 let g:ale_set_highlights=0 "When this option is set to `1`, highlights will be set for problems.
 let g:ale_lint_on_enter = 0 "When this option is set to `1`, the |BufWinEnter| and |BufRead| events will be used to apply linters when buffers are first opened
 let g:ale_virtualtext_cursor = 'disabled' "controls how ALE will display problems
