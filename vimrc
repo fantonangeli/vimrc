@@ -476,7 +476,7 @@ nnoremap <Leader>f :CtrlPFunky<Cr>
 " list all useCallbacks in the current buffer
 nnoremap <Leader>rc :vimgrep 'useCallback' % \| call OpenQuickfix()<CR>
 " list all useState and useMemo in the current buffer
-nnoremap <Leader>rs :vimgrep "\(useState\|useMemo\)" % \| call OpenQuickfix()<CR>
+nnoremap <Leader>rs :vimgrep "\(useState\\|useMemo\)" % \| call OpenQuickfix()<CR>
 "select function
 nnoremap <Leader>vf va{V<Cr>
 "select function with jsdoc
