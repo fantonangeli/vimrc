@@ -474,7 +474,7 @@ nnoremap <Leader>P :CtrlP<Cr>
 "CtrlPFunky
 nnoremap <Leader>f :CtrlPFunky<Cr>
 " list all useCallbacks in the current buffer
-nnoremap <Leader>rc :vimgrep 'useCallback' % \| call OpenQuickfix()<CR>
+nnoremap <Leader>rc :vimgrep 'const .*useCallback' % \| call OpenQuickfix()<CR>
 " list all useState and useMemo in the current buffer
 nnoremap <Leader>rs :vimgrep "const .*\(useState\\|useMemo\)" % \| call OpenQuickfix()<CR>
 "select function
