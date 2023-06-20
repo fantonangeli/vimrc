@@ -113,7 +113,7 @@ Plug 'schickling/vim-bufonly' "Delete all the buffers except the current buffer.
 " Plug 'wesQ3/vim-windowswap' "Swap your windows without ruining your layout 
 " Plug 'MarcWeber/vim-addon-mw-utils' "required by vim-snipmate
 " Plug 'tomtom/tlib_vim' "required by vim-snipmate
-Plug 'ctrlpvim/ctrlp.vim' "Full path fuzzy file, buffer, mru, tag, ... finder for Vim
+" Plug 'ctrlpvim/ctrlp.vim' "Full path fuzzy file, buffer, mru, tag, ... finder for Vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "A command-line fuzzy finder
 Plug 'junegunn/fzf.vim' "fzf 4 vim
 " Plug 'tpope/vim-dispatch' "dispatch.vim: Asynchronous build and test dispatcher
@@ -280,12 +280,13 @@ augroup END
 
 " FZF current project
 " nnoremap <c-l> :execute 'GFiles '.getcwd()<CR>
+nnoremap <c-p> :FZF<CR>
 nnoremap <c-l> :call fzf#run(fzf#wrap({'source': 'git ls-files'}))<CR>
 
 " Mapping selecting Mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
+" nmap <leader><tab> <plug>(fzf-maps-n)
+" xmap <leader><tab> <plug>(fzf-maps-x)
+" omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
@@ -385,12 +386,12 @@ command -nargs=1 TSF tabnew | setfiletype <args>
 command UpdateAll PlugUpgrade | PlugUpdate
 command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
-command! CopyFileRelPath let @+=expand("%:.") "Copy the relative path of the current file
-command! CopyFileFullPath let @+=expand("%:p") "Copy the full path of the current file
-command! CopyFileCoordinates let @+=expand("%:.").":".line(".").":".col(".") "Copy the relative path of the current file and the line number
-command! CopyFileFullPathCoordinates let @+=expand("%:p").":".line(".").":".col(".")  "Copy the full path of the current file and the line number
-command! CopySessionName let @+=xolox#session#find_current_session()
-command! CopyBranchName call CopyBranchName()
+command! CPFileRelPath let @+=expand("%:.") "Copy the relative path of the current file
+command! CPFileFullPath let @+=expand("%:p") "Copy the full path of the current file
+command! CPFileCoordinates let @+=expand("%:.").":".line(".").":".col(".") "Copy the relative path of the current file and the line number
+command! CPFileFullPathCoordinates let @+=expand("%:p").":".line(".").":".col(".")  "Copy the full path of the current file and the line number
+command! CPSessionName let @+=xolox#session#find_current_session()
+command! CPBranchName call CPBranchName()
 command! -range GdiffSince execute "silent! !git difftool -d " . @* . "&"
 command! SetWorkingDirectory :cd %:p:h
 command! LexploreHere :Lexplore %:p:h
@@ -469,7 +470,7 @@ map <C-k> :cp<cr>
 
 "MY LEADER KEYS{{{
 
-nnoremap <Leader>P :CtrlP<Cr>
+" nnoremap <Leader>P :CtrlP<Cr>
 
 "CtrlPFunky
 nnoremap <Leader>f :CtrlPFunky<Cr>
@@ -484,8 +485,6 @@ nnoremap <Leader>vjf va{o?\/\*\*Vk<Cr>
 "copy function
 " nnoremap <Leader>yf va{Vy<Cr>
 nnoremap <Leader>yf va{o?\/\*\*Vky<Cr>
-"copy all 
-nnoremap <Leader>ya ggVGy'.<cr>
 "paste+indent
 nnoremap <Leader>p p=`]<cr>
 "paste before+indent
@@ -719,9 +718,9 @@ nmap <leader>cl  <Plug>(coc-codelens-action)
 " }}}
 
 " CtrlP config {{{
-let g:ctrlp_cmd = 'CtrlPCurWD'
-let g:ctrlp_follow_symlinks = 1
-let g:ctrlp_by_filename = 1 
+" let g:ctrlp_cmd = 'CtrlPCurWD'
+" let g:ctrlp_follow_symlinks = 1
+" let g:ctrlp_by_filename = 1 
 " }}} 
 
 " vim-snipmate config {{{
@@ -768,10 +767,10 @@ let g:gutentags_project_root = ['package.json']
 " }}}
 
 " CtrlP {{{
-let g:ctrlp_extensions = ['tag']
+" let g:ctrlp_extensions = ['tag']
 
 "ctrlp ignore node_modules
-let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|build\|dist\|backstop_data\|target'
+" let g:ctrlp_custom_ignore = 'bower_components\|node_modules\|DS_Store\|build\|dist\|backstop_data\|target'
 " }}}
 
 " vim-session {{{
@@ -832,7 +831,7 @@ function! TodosBuffers()
 endfunction
 
 " copy branch name
-function! CopyBranchName()
+function! CPBranchName()
     execute ':let @+="' . FugitiveHead() . '"'
 endfunction
 
