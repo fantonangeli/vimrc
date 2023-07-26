@@ -353,6 +353,7 @@ command PutPRComment :normal iFixes comment: p:x<CR>
 command JsExec :w !node
 command EditSessionConfig execute 'edit' xolox#session#name_to_path(xolox#session#find_current_session()."x")
 command! Json2yaml execute 'r ! echo -e | yq -p j -o y '.shellescape(@",1)
+command! FileOpenInNewWindow !gvim % &
 
 " Grep commands
 "search in current project
