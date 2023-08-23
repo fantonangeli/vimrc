@@ -387,6 +387,7 @@ command -nargs=1 TSF tabnew | setfiletype <args>
 command UpdateAll PlugUpgrade | PlugUpdate
 command Spell setlocal spell spelllang=en_us<CR>
 command SpellOff set nospell<CR>
+command! CPFilenameAndContent :call CPFilenameAndContent() "copy the filename (non the path) and the content of the current buffer
 command! CPFileRelPath let @+=expand("%:.") "Copy the relative path of the current file
 command! CPFileFullPath let @+=expand("%:p") "Copy the full path of the current file
 command! CPFileCoordinates let @+=expand("%:.").":".line(".").":".col(".") "Copy the relative path of the current file and the line number
@@ -834,6 +835,15 @@ endfunction
 " copy branch name
 function! CPBranchName()
     execute ':let @+="' . FugitiveHead() . '"'
+endfunction
+
+"copy the filename (non the path) and the content of the current buffer
+function! CPFilenameAndContent()
+    let filename = expand('%:t')
+    let content = join(getline(1, '$'), "\n")
+    let result = "File: " . filename . "\n-------------------------------------------------------\n" . content
+    let @+ = result
+    echo "Formatted content yanked to clipboard."
 endfunction
 
 " }}}
