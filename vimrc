@@ -172,7 +172,7 @@ if g:profile == "develop"
 
     " Git Support
     Plug 'tpope/vim-fugitive'  "A Git wrapper so awesome, it should be illegal 
-    Plug 'rbong/vim-flog', { 'branch': 'v1' } "lightweight and powerful git branch viewer that integrates with fugitive
+    Plug 'rbong/vim-flog' "lightweight and powerful git branch viewer that integrates with fugitive
     Plug 'idanarye/vim-merginal' "nice interface for dealing with Git branches
     Plug 'mhinz/vim-signify' "Signify (or just Sy) uses the sign column to indicate added, modified and removed lines in a file that is managed by a version control system (VCS)
     Plug 'ruanyl/vim-gh-line' "opens a link to the current line on GitHub 
@@ -364,6 +364,10 @@ command! -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 command! -nargs=1 VGTS VG <args> --include=*.{ts,tsx}
 "find current word in the project
 command VGWord :normal yiw:VG <c-r>"<cr>
+"find current word in typescript files, showing only exports
+command! FindExports :normal yiw:VGTS export.*\\W<c-r>"\\W<cr>
+"find current word in typescript files, showing only imports
+command! FindImports :normal yiw:VGTS import.*\\W<c-r>"\\W.*from<cr>
 "search with git grep
 command! -nargs=1 GG Ggrep -Ir -E <q-args> | call OpenQuickfix()
 "search and list all TODOS, BUGS, FIXME
