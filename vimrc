@@ -517,9 +517,9 @@ nnoremap <Leader>l :call Lint()<CR>
 " ALEHover
 nnoremap <Leader>ah :ALEHover<CR>
 " ALEPrev
-nnoremap <Leader>ap :ALEPrevious<CR>
+nnoremap <Leader>ap :ALEPrevious -error<CR>
 " ALENext
-nnoremap <Leader>an :ALENext<CR>
+nnoremap <Leader>an :ALENext -error<CR>
 " ALEFix
 nnoremap <Leader>af :ALEFix<CR>
 " ALEToggle
