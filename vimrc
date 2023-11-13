@@ -187,7 +187,7 @@ if g:profile == "develop"
                 \ 'do': 'make install'
                 \} "Generate JSDoc to your JavaScript code. 
     " Plug 'ternjs/tern_for_vim' "Tern plugin for Vim
-    Plug 'tacahiroy/ctrlp-funky' "A super simple function navigator for ctrlp.vim 
+    " Plug 'tacahiroy/ctrlp-funky' "A super simple function navigator for ctrlp.vim 
     Plug 'leafgarland/typescript-vim' "Syntax file and other settings for TypeScript
     Plug 'maxmellon/vim-jsx-pretty' "The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file
     " Plug 'agarrharr/consolation-vim' "A vim plugin for JavaScript to console.log out whatever you have in the register. 
