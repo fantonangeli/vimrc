@@ -354,6 +354,7 @@ command JsExec :w !node
 command EditSessionConfig execute 'edit' xolox#session#name_to_path(xolox#session#find_current_session()."x")
 command! Json2yaml execute 'r ! echo -e | yq -p j -o y '.shellescape(@",1)
 command! FileOpenInNewWindow !gvim % &
+command! GotoFileAtPosition call GotoFileAtPosition() 
 
 " Grep commands
 "search in current project
@@ -854,6 +855,20 @@ function! CPFilenameAndContent()
     let result = "File: " . filename . "\n-------------------------------------------------------\n" . content
     let @+ = result
     echo "Formatted content yanked to clipboard."
+endfunction
+
+" open a file at a specific position, reading the position from the line under
+" the cursor
+" eg. path/tofile:5:10
+function GotoFileAtPosition()
+  let filePathWithCoordinatesSplit = split(expand('<cWORD>'), ':')
+  let filePath = filePathWithCoordinatesSplit[0]
+  let lineNumber = filePathWithCoordinatesSplit[1]
+  let columnNumber = filePathWithCoordinatesSplit[2]
+
+  " Open the file at the specified position
+  exec 'e +'.lineNumber.' '.filePath
+  exec 'normal '.columnNumber.'|'
 endfunction
 
 " }}}
