@@ -86,6 +86,9 @@ set timeoutlen=3000 "make vim leader key persist for longer
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 
+"ignore all white space in diff mode
+set diffopt+=iwhiteall
+
 if has("win32")
     "Clipboard
     set clipboard=unnamed
@@ -381,9 +384,6 @@ command FindThisFile VG %:t
 " Vimgrep commands
 " command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts}
 " command -nargs=1 VG noautocmd vimgrep <args> | copen | cc1 | ex
-
-command! Difft windo diffthis
-command! Diffo windo diffoff
 
 command -nargs=1 SFT setfiletype <args>
 command ThisFunctions /this\.\w\+\s*=\s*function
