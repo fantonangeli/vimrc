@@ -219,7 +219,7 @@ augroup END
 " BASH
 augroup bash
     au!
-    au BufNewFile,BufRead *.sh setlocal filetype=bash
+    au BufNewFile,BufRead *.sh,*.bats setlocal filetype=bash
 augroup END
 
 " SCSS
