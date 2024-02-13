@@ -572,7 +572,7 @@ noremap <Leader>c :TComment<CR>
 set background=light
 let g:everforest_background = 'soft'
 let g:everforest_better_performance = 1
-colorscheme everforest
+colorscheme sonoma
 
 " }}}
 
