@@ -850,7 +850,7 @@ endfunction
 
 "copy the filename (non the path) and the content of the current buffer
 function! CPFilenameAndContent()
-    let filename = expand('%:t')
+    let filename = expand('%:.')
     let content = join(getline(1, '$'), "\n")
     let result = "File: " . filename . "\n-------------------------------------------------------\n" . content
     let @+ = result
