@@ -361,7 +361,7 @@ command! GotoFileAtPosition call GotoFileAtPosition()
 
 " Grep commands
 "search in current project
-command! -nargs=1 VG grep -IR --exclude-dir={bower_components,node_modules,dist,build,backstop_data,target,.}* --exclude="*.prod.js*" --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" --exclude="*.svg" --exclude="*-bundle.js" --exclude="*-bundle.js" --exclude="*.js.map" -E <args> | call OpenQuickfix()
+command! -nargs=1 VG grep -IR --exclude-dir={bower_components,node_modules,dist,build,backstop_data,target,.}* --exclude="*.prod.js*" --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" --exclude="*.svg" --exclude="*-bundle.js" --exclude="*-bundle.js" --exclude="*.js.map" -P <args> | call OpenQuickfix()
 "execute VG only on frontend files
 command! -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 "execute VG only on typescript files
