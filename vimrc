@@ -124,7 +124,7 @@ Plug 'xolox/vim-misc' "Miscellaneous auto-load Vim scripts
 Plug 'xolox/vim-session' "Extended session management
 Plug 'drmikehenry/vim-fontsize' "Adjust font size via keypresses
 Plug 'mbbill/undotree' "The undo history visualizer for VIM
-Plug 'ludovicchabant/vim-gutentags' "A Vim plugin that manages your tag files 
+" Plug 'ludovicchabant/vim-gutentags' "A Vim plugin that manages your tag files 
 Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
 Plug 'dhruvasagar/vim-dotoo' "Org-mode like task logging & time tracking in Vim
 
@@ -773,11 +773,11 @@ set omnifunc=ale#completion#OmniFunc
 "}}}
 
 " gutentags {{{
-set tags=./.tags,.tags
-let g:gutentags_ctags_tagfile=".tags"
-let g:gutentags_ctags_exclude = ['node_modules', 'build', 'dist']
-let g:gutentags_project_root = ['package.json']
-let g:gutentags_ctags_extra_args = ['--options='.expand('~/.ctags')]
+" set tags=./.tags,.tags
+" let g:gutentags_ctags_tagfile=".tags"
+" let g:gutentags_ctags_exclude = ['node_modules', 'build', 'dist']
+" let g:gutentags_project_root = ['package.json']
+" let g:gutentags_ctags_extra_args = ['--options='.expand('~/.ctags')]
 " }}}
 
 " CtrlP {{{
