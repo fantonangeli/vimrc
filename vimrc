@@ -126,7 +126,6 @@ Plug 'drmikehenry/vim-fontsize' "Adjust font size via keypresses
 Plug 'mbbill/undotree' "The undo history visualizer for VIM
 " Plug 'ludovicchabant/vim-gutentags' "A Vim plugin that manages your tag files 
 Plug 'chrisbra/Recover.vim' "adds a diff option when Vim finds a swap file
-Plug 'dhruvasagar/vim-dotoo' "Org-mode like task logging & time tracking in Vim
 
 " Theme / Interface
 Plug 'itchyny/lightline.vim' "A light and configurable statusline/tabline plugin
