@@ -362,7 +362,7 @@ command! ShowCursor highlight iCursor guifg=red guibg=green
 
 " Grep commands
 "search in current project
-command! -nargs=1 VG grep -IR --exclude-dir={bower_components,node_modules,dist,build,backstop_data,target,.}* --exclude="*.prod.js*" --exclude=".*" --exclude="yarn.lock" --exclude="package-lock.json" --exclude="pnpm-lock.yaml" --exclude="graph.dot" --exclude="*.svg" --exclude="*-bundle.js" --exclude="*-bundle.js" --exclude="*.js.map" -P <args> | call OpenQuickfix()
+command! -nargs=1 VG execute 'grep -IR --exclude-dir={bower_components,node_modules,dist,build,backstop_data,target,.}* --exclude={*.prod.js*,.*,yarn.lock,package-lock.json,pnpm-lock.yaml,graph.dot,*.svg,*-bundle.js,*.js.map} '. get(g:, 'vg_grep_extra_options', '') .' -P ' . <q-args> . ' | call OpenQuickfix()'
 "execute VG only on frontend files
 command! -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
 "execute VG only on typescript files
