@@ -358,6 +358,7 @@ command EditSessionConfig execute 'edit' xolox#session#name_to_path(xolox#sessio
 command! Json2yaml execute 'r ! echo -e | yq -p j -o y '.shellescape(@",1)
 command! FileOpenInNewWindow !gvim % &
 command! GotoFileAtPosition call GotoFileAtPosition() 
+command! ShowCursor highlight iCursor guifg=red guibg=green
 
 " Grep commands
 "search in current project
