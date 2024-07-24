@@ -284,7 +284,7 @@ augroup END
 " FZF current project
 " nnoremap <c-l> :execute 'GFiles '.getcwd()<CR>
 nnoremap <c-p> :FZF<CR>
-nnoremap <c-l> :call fzf#run(fzf#wrap({'source': 'git ls-files'}))<CR>
+nnoremap <c-l> :call fzf#run(fzf#wrap({'source': 'git ls-files', 'options': '--multi'}))<CR>
 
 " Mapping selecting Mappings
 " nmap <leader><tab> <plug>(fzf-maps-n)
