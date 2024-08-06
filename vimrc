@@ -167,7 +167,7 @@ if g:profile == "develop"
     Plug 'maximbaz/lightline-ale' "ALE indicator for the lightline vim plugin.
     Plug 'Chiel92/vim-autoformat' "Format code with one button press (or automatically on save)
     Plug 'maksimr/vim-jsbeautify' "This extension allows you to use jsbeautifier inside vim
-    Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
+    " Plug 'metakirby5/codi.vim' "an interactive scratchpad for hackers, with a similar interface to Numi
     Plug 'jiangmiao/auto-pairs' "Insert or delete brackets, parens, quotes in pair.
 
 
