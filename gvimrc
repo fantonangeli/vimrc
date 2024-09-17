@@ -12,6 +12,3 @@ set guioptions-=e  "required from bufferline
 " set guioptions+=!
 
 set guioptions-=l  "hide left sidebar, try to fix cursor disappear
-
-"fullscreen
-:set lines=999 columns=999
