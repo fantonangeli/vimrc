@@ -273,6 +273,13 @@ augroup noundo txt
     au BufNewFile,BufRead *.noundo.txt setlocal noundofile
 augroup END
 
+" Apply custom cursor color only in dark mode
+augroup MyColors
+    autocmd!
+    autocmd ColorScheme * if &background == "dark" | highlight iCursor guifg=bg guibg=green | endif
+    autocmd ColorScheme * if &background == "light" | highlight iCursor guifg=bg guibg=#943A20 | endif
+augroup END
+
 " }}}
 
 " MAPPINGS CONFIGURATIONN {{{
