@@ -267,6 +267,11 @@ augroup typescripttsx
     au BufNewFile,BufRead *.tsx let g:jsdoc_formatter = 'tsdoc'
 augroup END
 
+augroup jenkins
+    au!
+    au BufNewFile,BufRead *.jenkinsfile,*.Jenkinsfile,Jenkinsfile,jenkinsfile,Jenkinsfile.* setf groovy
+augroup END
+
 " noundo
 augroup noundo txt
     au!
