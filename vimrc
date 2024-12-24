@@ -416,11 +416,14 @@ command! CPFileCoordinates let @+=expand("%:.").":".line(".").":".col(".") "Copy
 command! CPFileFullPathCoordinates let @+=expand("%:p").":".line(".").":".col(".")  "Copy the full path of the current file and the line number
 command! CPSessionName let @+=xolox#session#find_current_session()
 command! CPBranchName call CPBranchName()
-command! -range GdiffSince execute "silent! !git difftool -d " . @* . "&"
 command! SetWorkingDirectory :cd %:p:h
 command! LexploreHere :Lexplore %:p:h
 
-"MY JsBeautify CMD
+"Git CMDs
+command! GDiffToolsMainThis execute "silent! !git difftool -y upstream/main % &"
+command! -range GDiffSince execute "silent! !git difftool -d " . @* . "&"
+
+"MY JsBeautify CMDs
 command JsBeautify call JsBeautify()
 command JsonBeautify call JsonBeautify()
 command JsxBeautify call JsxBeautify()
