@@ -147,7 +147,7 @@ if g:profile == "develop"
     Plug 'nicwest/vim-camelsnek' "Convert between camel and snek case
     Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
     Plug 'rhysd/devdocs.vim' "This is a Vim plugin for devdocs
-
+    Plug 'github/copilot.vim' "GitHub Copilot
     " Coc 
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "Custom popup menu with snippet support
     Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'} "Html language server extension for coc.nvim
