@@ -420,7 +420,7 @@ command! SetWorkingDirectory :cd %:p:h
 command! LexploreHere :Lexplore %:p:h
 
 "Git CMDs
-command! GDiffToolsMainThis execute "silent! !git difftool -y upstream/main % &"
+command! GDiffUpstreamMainThis execute "silent! !git difftool -y upstream/main % &"
 command! -range GDiffSince execute "silent! !git difftool -d " . @* . "&"
 
 "MY JsBeautify CMDs
