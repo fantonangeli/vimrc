@@ -157,6 +157,7 @@ if g:profile == "develop"
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'} "Tsserver language server extension for coc.nvim
     Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'} "markdownlint extension for coc.nvim
     Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'} "Yaml language server extension for coc.nvim
+    Plug 'einenlum/yaml-revealer' "plugin to easily navigate through Yaml files 
     " Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'} "Java language server extension for coc.nvim
 
     " Generic Programming Support 
