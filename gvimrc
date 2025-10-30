@@ -1,6 +1,6 @@
 "fullscreen
 set lines=999 columns=999 
-set guifont="FuraMono_NF:h10:cANSI:qDRAFT;Monospace\ 10"
+set guifont=Monospace\ 10
 
 "Menu
 set guioptions-=T  "remove toolbar"
