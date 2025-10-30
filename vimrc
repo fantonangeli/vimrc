@@ -147,7 +147,7 @@ if g:profile == "develop"
     Plug 'nicwest/vim-camelsnek' "Convert between camel and snek case
     Plug 'vim-test/vim-test' "Vim wrapper for running tests on different granularities
     Plug 'rhysd/devdocs.vim' "This is a Vim plugin for devdocs
-    " Plug 'github/copilot.vim' "GitHub Copilot
+    
     " Coc 
     Plug 'neoclide/coc.nvim', {'branch': 'release'} "Custom popup menu with snippet support
     Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'} "Html language server extension for coc.nvim
@@ -155,7 +155,6 @@ if g:profile == "develop"
     Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'} "Css language server extension for coc.nvim
     Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'} "Snippets solution for coc.nvim
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'} "Tsserver language server extension for coc.nvim
-    Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'} "markdownlint extension for coc.nvim
     Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'} "Yaml language server extension for coc.nvim
     Plug 'einenlum/yaml-revealer' "plugin to easily navigate through Yaml files 
     " Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'} "Java language server extension for coc.nvim
@@ -172,6 +171,7 @@ if g:profile == "develop"
 
 
     " Markdown / Writting
+    Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'} "markdownlint extension for coc.nvim
 
     " Git Support
     Plug 'tpope/vim-fugitive'  "A Git wrapper so awesome, it should be illegal 
@@ -194,9 +194,6 @@ if g:profile == "develop"
     Plug 'leafgarland/typescript-vim' "Syntax file and other settings for TypeScript
     Plug 'maxmellon/vim-jsx-pretty' "The React syntax highlighting and indenting plugin for vim. Also supports the typescript tsx file
     " Plug 'agarrharr/consolation-vim' "A vim plugin for JavaScript to console.log out whatever you have in the register. 
-
-    "Typo3
-    " Plug 'elmar-hinz/vim.typoscript' "Syntax highlighting for the unbeatable vim text editor
 
     " JSON
     Plug 'vim-scripts/JSON.vim' "A syntax highlighting file for JSON
