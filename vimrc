@@ -410,7 +410,7 @@ command! CPFilenameAndContent :call CPFilenameAndContent() "copy the filename (n
 command! CPFileRelPath let @+=expand("%:.") "Copy the relative path of the current file
 command! CPFileFullPath let @+=expand("%:p") "Copy the full path of the current file
 command! CPFileCoordinates let @+=expand("%:.").":".line(".").":".col(".") "Copy the relative path of the current file and the line number
-command! CPFileFullPathCoordinates let @+=expand("%:p").":".line(".").":".col(".")  "Copy the full path of the current file and the line number
+command! CPFileFullPathCoordinates let @+=expand("%:p").":".line(".")  "Copy the full path of the current file and the line number
 command! CPSessionName let @+=xolox#session#find_current_session()
 command! CPBranchName call CPBranchName()
 command! SetWorkingDirectory :cd %:p:h
