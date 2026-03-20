@@ -523,6 +523,8 @@ nnoremap <Leader>u :UndotreeToggle<CR>
 nnoremap <Leader>gps :Git push<CR>
 " Git pull
 nnoremap <Leader>gpl :Git pull \| Flog<CR>
+" Git commit signed
+nnoremap <Leader>gc :Git commit --signoff<CR>
 " Merginal
 nnoremap <Leader>m :Merginal<CR>
 " Lint
