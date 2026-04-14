@@ -875,10 +875,10 @@ endfunction
 " the cursor
 " eg. path/tofile:5:10
 function GotoFileAtPosition()
-  let filePathWithCoordinatesSplit = split(expand('<cWORD>'), ':')
-  let filePath = filePathWithCoordinatesSplit[0]
-  let lineNumber = filePathWithCoordinatesSplit[1]
-  let columnNumber = filePathWithCoordinatesSplit[2]
+  let parts = split(expand('<cWORD>'), ':')
+  let filePath = get(parts, 0, '')
+  let lineNumber = get(parts, 1, 1)
+  let columnNumber = get(parts, 2, 1)
 
   " Open the file at the specified position
   exec 'e +'.lineNumber.' '.filePath
