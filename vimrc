@@ -873,16 +873,38 @@ endfunction
 
 " open a file at a specific position, reading the position from the line under
 " the cursor
-" eg. path/tofile:5:10
-function GotoFileAtPosition()
-  let parts = split(expand('<cWORD>'), ':')
-  let filePath = get(parts, 0, '')
-  let lineNumber = get(parts, 1, 1)
-  let columnNumber = get(parts, 2, 1)
+function! GotoFileAtPosition()
+  let target = expand('<cWORD>')
 
-  " Open the file at the specified position
-  exec 'e +'.lineNumber.' '.filePath
-  exec 'normal '.columnNumber.'|'
+  " file:start-end
+  let m = matchlist(target, '\v^(.*):(\d+)-(\d+)$')
+  if !empty(m)
+    let file = m[1]
+    let start = str2nr(m[2])
+    let end = str2nr(m[3])
+    exec 'edit +' . start . ' ' . fnameescape(file)
+    exec 'normal! V' . max([end - start, 0]) . 'j'
+    return
+  endif
+
+  " file:line:column
+  let m = matchlist(target, '\v^(.*):(\d+):(\d+)$')
+  if !empty(m)
+    let file = m[1]
+    let line = str2nr(m[2])
+    let col = str2nr(m[3])
+    exec 'edit +' . line . ' ' . fnameescape(file)
+    exec 'normal! ' . col . '|'
+    return
+  endif
+
+  " file:line
+  let m = matchlist(target, '\v^(.*):(\d+)$')
+  if !empty(m)
+    let file = m[1]
+    let line = str2nr(m[2])
+    exec 'edit +' . line . ' ' . fnameescape(file)
+  endif
 endfunction
 
 " }}}
