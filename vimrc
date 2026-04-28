@@ -136,6 +136,7 @@ Plug 'flazz/vim-colorschemes' "one colorscheme pack to rule them all!
 Plug 'xolox/vim-colorscheme-switcher' "Makes it easy to quickly switch between color schemes
 Plug 'sainnhe/everforest' "Comfortable & Pleasant Color Scheme for Vim 
 Plug 'lifepillar/vim-solarized8' "Solarized colorschemes
+Plug 'wsdjeg/vim-fetch' "handle line and column numbers in file names
 
 " Generic Programming Support 
 Plug 'tomtom/tcomment_vim' "An extensible & universal comment vim-plugin that also handles embedded filetypes
