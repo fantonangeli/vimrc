@@ -94,13 +94,15 @@ if has("win32")
     set clipboard=unnamed
 
     " grep program
-    set grepprg=$HOME\Desktop\standalone\cygwin\bin\grep.exe\ -n\ $*
+    set grepprg=rg\ --hidden\ --vimgrep\ --smart-case\ $*
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
 else
     "Clipboard
     set clipboard=unnamedplus
 
     " grep program
-    set grepprg=grep\ -n\ $*
+    set grepprg=rg\ --hidden\ --vimgrep\ --smart-case\ $*
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
 " }}}
@@ -370,11 +372,11 @@ command! ShowCursor highlight iCursor guifg=red guibg=green
 
 " Grep commands
 "search in current project
-command! -nargs=1 VG execute 'grep -IR --exclude-dir={bower_components,node_modules,dist,build,backstop_data,target}* --exclude-dir=.git --exclude={*.prod.js*,.*,yarn.lock,package-lock.json,pnpm-lock.yaml,graph.dot,*.svg,*-bundle.js,*.js.map,*.base64png} '. get(g:, 'vg_grep_extra_options', '') .' -P ' . <q-args> . ' | call OpenQuickfix()'
+command! -nargs=1 VG call RunVG(<q-args>, [])
 "execute VG only on frontend files
-command! -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts,json,tsx}
+command! -nargs=1 VGFE call RunVG(<q-args>, ['-g', '*.{html,js,css,ts,json,tsx}'])
 "execute VG only on typescript files
-command! -nargs=1 VGTS VG <args> --include=*.{ts,tsx}
+command! -nargs=1 VGTS call RunVG(<q-args>, ['-g', '*.{ts,tsx}'])
 "find current word in the project
 command VGWord :normal yiw:VG <c-r>"<cr>
 "find current word in typescript files, showing only exports
@@ -384,9 +386,9 @@ command! FindImports :normal yiw:VGTS import.*\\W<c-r>"\\W.*from<cr>
 "search with git grep
 command! -nargs=1 GG Ggrep -Ir -E <q-args> | call OpenQuickfix()
 "search and list all TODOS, BUGS, FIXME
-command TODOS VGFE 'TODO\|BUG\|FIXME'
+command TODOS call RunVG('TODO|BUG|FIXME', ['-g', '*.{html,js,css,ts,json,tsx}'])
 command TODOSBUFFERS call TodosBuffers()
-command! PRFindDirtyLines VGFE 'TODO\|BUG\|FIXME\|console\.log\|debugger;'
+command! PRFindDirtyLines call RunVG('TODO|BUG|FIXME|console\.log|debugger;', ['-g', '*.{html,js,css,ts,json,tsx}'])
 "search this file in the project
 command FindThisFile VG %:t
 
@@ -827,12 +829,61 @@ endfunction
 
 " open quickfix with mappings
 function! OpenQuickfix()
+    if empty(getqflist())
+        cclose
+        echo 'No matches'
+        return
+    endif
+
     copen
     cc1
     ex
     map <C-j> :cn<cr>
     map <C-k> :cp<cr>
     nnoremap <Leader>x :ccl<Cr>
+endfunction
+
+function! RunVG(pattern, extra_args) abort
+    let l:cmd = [
+        \ 'rg',
+        \ '--hidden',
+        \ '--vimgrep',
+        \ '--smart-case',
+        \ '--glob', '!bower_components/**',
+        \ '--glob', '!node_modules/**',
+        \ '--glob', '!dist/**',
+        \ '--glob', '!build/**',
+        \ '--glob', '!backstop_data/**',
+        \ '--glob', '!target/**',
+        \ '--glob', '!.git/**',
+        \ '--glob', '!*.prod.js*',
+        \ '--glob', '!yarn.lock',
+        \ '--glob', '!package-lock.json',
+        \ '--glob', '!pnpm-lock.yaml',
+        \ '--glob', '!graph.dot',
+        \ '--glob', '!*.svg',
+        \ '--glob', '!*-bundle.js',
+        \ '--glob', '!*.js.map',
+        \ '--glob', '!*.base64png',
+        \ ]
+
+    call extend(l:cmd, a:extra_args)
+    call extend(l:cmd, ['-P', a:pattern])
+
+    let l:lines = systemlist(l:cmd)
+    if v:shell_error == 1 || empty(l:lines) || (len(l:lines) == 1 && empty(l:lines[0]))
+        call setqflist([], 'r', {'items': []})
+    else
+        call setqflist([], 'r', {'lines': l:lines, 'efm': &grepformat})
+    endif
+
+    if v:shell_error > 1
+        echohl ErrorMsg
+        echom join(l:lines, "\n")
+        echohl None
+    endif
+
+    call OpenQuickfix()
 endfunction
 
 " search with google
@@ -907,4 +958,3 @@ function! GotoFileAtPosition()
 endfunction
 
 " }}}
-
