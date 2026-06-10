@@ -390,7 +390,7 @@ command TODOS call RunVG('TODO|BUG|FIXME', ['-g', '*.{html,js,css,ts,json,tsx}']
 command TODOSBUFFERS call TodosBuffers()
 command! PRFindDirtyLines call RunVG('TODO|BUG|FIXME|console\.log|debugger;', ['-g', '*.{html,js,css,ts,json,tsx}'])
 "search this file in the project
-command FindThisFile VG %:t
+command FindThisFile call RunVG(expand('%:t'), [])
 
 " Vimgrep commands
 " command -nargs=1 VGFE VG <args> --include=*.{html,js,css,ts}
